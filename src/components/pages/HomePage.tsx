@@ -245,6 +245,105 @@ export default function HomePage() {
                 </div>
             </div>
           </section>
+           {/* --- BRAND PILLARS (Why Saanjh) --- */}
+      <section className="py-32 px-6 md:px-12 bg-gradient-to-b from-[#F5F2ED] via-[#FAF8F5] to-[#F9F7F3] relative overflow-hidden">
+        {/* Decorative Background Element */}
+        <div className="absolute top-0 right-0 w-[40vw] h-[40vw] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
+
+        <div className="max-w-[100rem] mx-auto">
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-24">
+            {/* Sticky Header */}
+            <div className="lg:col-span-4 lg:sticky lg:top-32 h-fit">
+              <Reveal>
+                <h2 className="font-heading text-5xl md:text-7xl text-warm-cream mb-8 leading-tight">
+                  The Essence <br />
+                  <span className="text-primary italic">of Saanjh</span>
+                </h2>
+                <p className="text-soft-rose-beige text-lg leading-relaxed mb-12 max-w-md">
+                  Saanjh is more than tea; it is a pause button for the world. We invite you to reclaim your evenings through the sacred art of the tea ceremony.
+                </p>
+                <Link to="/about">
+                  <Button variant="outline" className="border-primary/30 text-primary hover:bg-primary hover:text-matte-black rounded-none px-8 py-6 text-lg font-heading transition-all duration-500">
+                    Read Our Story
+                  </Button>
+                </Link>
+              </Reveal>
+            </div>
+
+            {/* Pillars Grid */}
+            <div className="lg:col-span-8 grid md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
+              {brandPillars.map((pillar, index) => {
+                const IconComponent = pillarIcons[pillar.pillarName as keyof typeof pillarIcons] || Leaf;
+                return (
+                  <Reveal key={pillar._id} delay={index * 150}>
+                    <div className="group relative h-full">
+                      {/* Decorative Glow Background */}
+                      <div className="absolute -inset-1 bg-gradient-to-br from-primary/20 via-transparent to-primary/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-xl" />
+                      
+                      {/* Main Card */}
+                      <div className="relative p-8 border-2 border-primary/40 group-hover:border-primary/80 transition-all duration-500 bg-gradient-to-br from-white/[0.04] via-white/[0.01] to-transparent rounded-2xl backdrop-blur-sm h-full flex flex-col">
+                        {/* Gold Accent Line */}
+                        <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-primary/60 to-transparent" />
+                        
+                        {/* Icon Container with Enhanced Styling */}
+                        <div className="mb-6 flex justify-center flex-shrink-0">
+                          <div className="relative">
+                            {/* Icon Glow */}
+                            <div className="absolute inset-0 bg-primary/20 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                            
+                            {/* Icon Background Circle */}
+                            <div className="relative w-20 h-20 rounded-full border-2 border-primary/50 group-hover:border-primary/80 transition-colors duration-500 flex items-center justify-center bg-gradient-to-br from-primary/10 to-transparent">
+                              {pillar.pillarIcon ? (
+                                <Image src={pillar.pillarIcon} alt={pillar.pillarName || ''} className="w-12 h-12 object-contain" width={48} />
+                              ) : (
+                                <IconComponent className="w-12 h-12 text-primary stroke-[0.5] group-hover:scale-110 transition-transform duration-500" />
+                              )}
+                            </div>
+                          </div>
+                        </div>
+                        
+                        {/* Content - Always Visible */}
+                        <div className="flex flex-col flex-grow">
+                          <h3 className="font-heading text-2xl text-warm-cream mb-3 group-hover:text-primary transition-colors duration-500 text-center">{pillar.pillarName}</h3>
+                          
+                          {/* Primary Description - Always Visible */}
+                          <p className="text-soft-rose-beige/90 leading-relaxed text-center mb-4 text-sm flex-grow">
+                            {pillar.pillarDescription}
+                          </p>
+                          
+                          {/* Detailed Description - Always Visible */}
+                          {pillar.detailedDescription && (
+                            <p className="text-soft-rose-beige/70 leading-relaxed text-center text-xs mb-6">
+                              {pillar.detailedDescription}
+                            </p>
+                          )}
+                          
+                          {/* CTA Button - Always Visible */}
+                          {pillar.ctaText && pillar.ctaUrl && (
+                            <div className="flex justify-center pt-4 border-t border-primary/20 group-hover:border-primary/40 transition-colors duration-500 mt-auto">
+                              <a 
+                                href={pillar.ctaUrl} 
+                                className="inline-flex items-center gap-2 text-primary hover:text-warm-cream transition-colors duration-300 font-heading text-xs uppercase tracking-widest"
+                              >
+                                {pillar.ctaText}
+                                <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+                              </a>
+                            </div>
+                          )}
+                        </div>
+                        
+                        {/* Bottom Accent Line */}
+                        <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      </div>
+                    </div>
+                  </Reveal>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
+
           {/* --- PRODUCT SHOWCASE: MAGAZINE SPREAD --- */}
           <section className="py-32 px-4 bg-warm-cream">
             <div className="max-w-[100rem] mx-auto">
