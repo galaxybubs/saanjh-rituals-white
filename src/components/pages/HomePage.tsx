@@ -163,7 +163,7 @@ export default function HomePage() {
 
           </section>
           {/* --- SAANJH RITUAL CALLOUT: PREMIUM SPLIT LAYOUT --- */}
-          <section className="md:px-12 bg-warm-cream relative overflow-hidden py-0 px-12 pt-[100px] pr-12 pb-[90px] pl-12">
+          <section className="md:px-12 bg-warm-cream relative overflow-hidden py-0 px-12 pt-[100px] pr-12 pb-[45px] pl-12">
             <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
             
             <div className="max-w-7xl mx-auto">
@@ -211,7 +211,7 @@ export default function HomePage() {
             </div>
           </section>
           {/* --- PILLARS SECTION: ICONOGRAPHY --- */}
-          <section className="py-24 px-4 bg-white/50 border-y border-primary/10">
+          <section className="bg-white/50 border-y border-primary/10 py-0 px-4 pt-10 pr-4 pb-5 pl-4">
             <div className="max-w-[100rem] mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 divide-y md:divide-y-0 md:divide-x divide-primary/10">
                     {brandPillars.map((pillar, index) => (
