@@ -120,20 +120,22 @@ export default function HomePage() {
                 </AnimatedElement>
                 
                 <AnimatedElement delay={200}>
-                    <div className="mb-8 leading-none -space-y-2">
-                        <h1 className="font-heading text-6xl md:text-8xl lg:text-9xl font-bold bg-gradient-to-r from-[#F5F5DC] via-[#E8D4B8] to-[#D4AF37] bg-clip-text text-transparent leading-[0.95] tracking-tight" style={{
-                          textShadow: '0 8px 32px rgba(0, 0, 0, 0.85), 0 0 60px rgba(232, 212, 184, 0.5), inset 0 2px 4px rgba(255, 255, 255, 0.5)',
-                          filter: 'drop-shadow(0 4px 8px rgba(0, 0, 0, 0.75))',
-                          WebkitTextStroke: '0.5px rgba(139, 105, 20, 0.35)',
-                          letterSpacing: '-0.02em'
+                    <div className="mb-8 leading-[1] -space-y-0">
+                        <h1 className="font-heading text-6xl md:text-8xl lg:text-9xl font-bold bg-gradient-to-r from-[#2A2A2A] via-[#3D3D1F] to-[#1A1A0F] bg-clip-text text-transparent leading-[0.95] tracking-tight" style={{
+                          textShadow: '0 12px 48px rgba(0, 0, 0, 0.95), 0 0 80px rgba(26, 26, 15, 0.9), inset 0 2px 6px rgba(212, 175, 55, 0.7)',
+                          filter: 'drop-shadow(0 6px 12px rgba(0, 0, 0, 0.9))',
+                          WebkitTextStroke: '0.8px rgba(212, 175, 55, 0.6)',
+                          letterSpacing: '-0.02em',
+                          paintOrder: 'stroke fill'
                         }}>
                             Saanjh
                         </h1>
-                        <p className="font-heading text-2xl md:text-4xl font-light tracking-[0.2em] bg-gradient-to-r from-[#D4AF37] via-[#C9A961] to-[#A37A52] bg-clip-text text-transparent" style={{
-                          textShadow: '0 5px 20px rgba(0, 0, 0, 0.75), 0 0 40px rgba(212, 175, 55, 0.4)',
-                          filter: 'drop-shadow(0 3px 6px rgba(0, 0, 0, 0.65))',
-                          WebkitTextStroke: '0.4px rgba(107, 80, 20, 0.3)',
-                          letterSpacing: '0.2em'
+                        <p className="font-heading text-2xl md:text-4xl font-light tracking-[0.2em] bg-gradient-to-r from-[#8B6914] via-[#5C4033] to-[#2A2A2A] bg-clip-text text-transparent" style={{
+                          textShadow: '0 8px 32px rgba(0, 0, 0, 0.9), 0 0 60px rgba(139, 105, 20, 0.6)',
+                          filter: 'drop-shadow(0 5px 10px rgba(0, 0, 0, 0.85))',
+                          WebkitTextStroke: '0.6px rgba(139, 105, 20, 0.7)',
+                          letterSpacing: '0.2em',
+                          paintOrder: 'stroke fill'
                         }}>
                             RITUALS
                         </p>
