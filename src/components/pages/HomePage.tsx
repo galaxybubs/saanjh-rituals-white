@@ -105,10 +105,10 @@ export default function HomePage() {
             {/* Background Parallax Layer */}
             <div className="absolute inset-0 z-0">
                 <Image
-                    src="https://static.wixstatic.com/media/b117e9_10da8a33b781414794e9cc8274613802~mv2.png?originWidth=1664&originHeight=896"
-                    alt="Golden hour ritual with chai steam and macro spices"
+                    src="https://static.wixstatic.com/media/b117e9_3d5a530246504ea09200601398049b03~mv2.gif"
                     className="w-full h-full object-cover object-center scale-105 animate-slow-zoom"
-                />
+                    originWidth={960}
+                    originHeight={540} />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/60 mix-blend-multiply" />
                 <div className="absolute inset-0 bg-gradient-to-t from-warm-cream via-transparent to-transparent opacity-20" />
             </div>
