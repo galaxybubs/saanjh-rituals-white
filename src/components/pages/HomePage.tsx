@@ -120,9 +120,20 @@ export default function HomePage() {
                 </AnimatedElement>
                 
                 <AnimatedElement delay={200}>
-                    <h1 className="font-heading text-6xl md:text-8xl lg:text-9xl font-bold bg-gradient-to-r from-[#D4AF37] via-[#E8C547] to-[#B8860B] bg-clip-text text-transparent drop-shadow-2xl mb-8 leading-[0.9] tracking-tight">
-                        Saanjh <br/> <span className="italic font-light">Rituals</span>
-                    </h1>
+                    <div className="mb-8">
+                        <h1 className="font-heading text-6xl md:text-8xl lg:text-9xl font-bold bg-gradient-to-r from-[#D4AF37] via-[#E8C547] to-[#B8860B] bg-clip-text text-transparent leading-[0.9] tracking-tight" style={{
+                          textShadow: '0 4px 20px rgba(0, 0, 0, 0.6), 0 0 40px rgba(212, 175, 55, 0.3)',
+                          filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5))'
+                        }}>
+                            Saanjh
+                        </h1>
+                        <p className="font-heading text-2xl md:text-4xl font-light tracking-[0.2em] bg-gradient-to-r from-[#D4AF37] via-[#E8C547] to-[#B8860B] bg-clip-text text-transparent mt-2" style={{
+                          textShadow: '0 4px 20px rgba(0, 0, 0, 0.6), 0 0 40px rgba(212, 175, 55, 0.3)',
+                          filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5))'
+                        }}>
+                            RITUALS
+                        </p>
+                    </div>
                 </AnimatedElement>
 
                 <AnimatedElement delay={400}>
