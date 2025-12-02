@@ -408,7 +408,7 @@ export default function HomePage() {
                 <div className="absolute bottom-8 left-8 right-8">
                   <div className="bg-matte-black/80 backdrop-blur-md p-6 border-l-2 border-primary transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
                     <h3 className="font-heading text-2xl text-warm-cream mb-1">{ingredient.ingredientName}</h3>
-                     <p className="text-xs font-bold tracking-widest uppercase text-primary mb-2">{ingredient.origin}</p>
+                    <p className="text-xs font-bold tracking-widest uppercase text-primary mb-2">{ingredient.origin}</p>
                     <p className="text-xs text-primary uppercase tracking-wider mb-2">{ingredient.botanicalName}</p>
                     <p className="text-sm text-soft-rose-beige line-clamp-2">{ingredient.shortDescription}</p>
                   </div>
