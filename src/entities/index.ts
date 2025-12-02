@@ -213,3 +213,23 @@ export interface WellnessBenefits {
   /** @wixFieldType boolean */
   isActive?: boolean;
 }
+
+/**
+ * Collection ID: wellnessbenefits
+ * Interface for WellnessBenefits
+ */
+export interface WellnessBenefits {
+  _id: string;
+  _createdDate?: Date;
+  _updatedDate?: Date;
+  /** @wixFieldType text */
+  benefitName?: string;
+  /** @wixFieldType text */
+  description?: string;
+  /** @wixFieldType image */
+  cardImage?: string;
+  /** @wixFieldType text */
+  callToActionLabel?: string;
+  /** @wixFieldType url */
+  callToActionLink?: string;
+}
