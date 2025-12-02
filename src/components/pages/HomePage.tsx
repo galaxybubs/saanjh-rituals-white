@@ -380,55 +380,22 @@ export default function HomePage() {
           </section>
           {/* --- INGREDIENT MACRO CINEMATIC --- */}
           <section className="py-32 overflow-hidden bg-dark-herbal-green">
-            <div className="max-w-[120rem] mx-auto px-6 mb-16 flex justify-between items-end">
-              <Reveal>
-                <h2 className="font-heading text-5xl md:text-7xl text-warm-cream">Botanical <br /><span className="text-primary italic">Alchemy</span></h2>
-              </Reveal>
-              <Reveal delay={200} className="hidden md:block">
-                <p className="text-soft-rose-beige max-w-md text-right">
-                  We blend rare spices, healing herbs, and premium tea leaves to create elixirs that nourish both body and spirit.
-                </p>
-              </Reveal>
-            </div>
+              <div className="max-w-[120rem] mx-auto px-6 mb-16 flex justify-between items-end">
+                <Reveal>
+                  <h2 className="font-heading text-5xl md:text-7xl text-warm-cream">Botanical <br /><span className="text-primary italic">Alchemy</span></h2>
+                </Reveal>
+                <Reveal delay={200} className="hidden md:block">
+                  <p className="text-soft-rose-beige max-w-md text-right">
+                    We blend rare spices, healing herbs, and premium tea leaves to create elixirs that nourish both body and spirit.
+                  </p>
+                </Reveal>
+              </div>
+              {/* Horizontal Scroll Container */}
 
-            {/* Horizontal Scroll Container */}
-            <div className="flex gap-8 overflow-x-auto pb-12 px-6 md:px-12 snap-x snap-mandatory scrollbar-hide">
-              {ingredients.map((ingredient, index) => (
-                <div key={ingredient._id} className="snap-center shrink-0 w-[85vw] md:w-[40vw] lg:w-[30vw] relative group cursor-none">
-                  <div className="aspect-[3/4] overflow-hidden rounded-sm relative">
-                    <Image
-                      src={ingredient.macroImage || 'https://static.wixstatic.com/media/b117e9_865972f3382e401b8aef27ce5a2579be~mv2.png?originWidth=768&originHeight=1024'}
-                      alt={ingredient.ingredientName || 'Ingredient'}
-                      className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110"
-                      width={800}
-                    />
-                    <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500" />
-                    
-                    {/* Floating Label */}
-                    <div className="absolute bottom-8 left-8 right-8">
-                      <div className="bg-matte-black/80 backdrop-blur-md p-6 border-l-2 border-primary transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
-                                            <p className="text-xs font-bold tracking-widest uppercase mb-2 text-secondary">{ingredient.origin}</p>
-                        <h3 className="font-heading text-2xl text-warm-cream mb-1">{ingredient.ingredientName}</h3>
-                        <p className="text-xs uppercase tracking-wider mb-2 text-foreground">{ingredient.botanicalName}</p>
-                        <p className="text-sm text-soft-rose-beige line-clamp-2">{ingredient.shortDescription}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
           </section>
           {/* --- INGREDIENT ALCHEMY: HORIZONTAL SCROLL --- */}
           <section className="py-32 bg-dark-herbal-green text-warm-cream overflow-hidden">
-            <div className="max-w-[100rem] mx-auto px-4 mb-16">
-                <AnimatedElement>
-                    <h2 className="font-heading text-5xl md:text-6xl mb-6">Botanical Alchemy</h2>
-                    <p className="text-warm-cream/70 text-lg max-w-2xl">
-                        We source only the finest, most potent ingredients from their native origins. 
-                        Macro visions of nature's healing treasures.
-                    </p>
-                </AnimatedElement>
-            </div>
+           
 
             {/* Marquee-like effect wrapper */}
             <div className="relative w-full overflow-x-auto pb-12 hide-scrollbar cursor-grab active:cursor-grabbing">
