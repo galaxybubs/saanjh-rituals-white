@@ -154,7 +154,7 @@ export default function HomePage() {
                         </Link>
                         <div className="hidden sm:block w-px h-8 bg-white/30" />
                         <a href="#evening-ritual" className="group flex items-center gap-2 text-white hover:text-primary transition-colors duration-300">
-                            <span className="text-lg border-b border-transparent group-hover:border-primary pb-1">Explore the Ritual</span>
+                            <span className="text-lg border-b border-transparent group-hover:border-primary pb-1 text-secondary-foreground">{"Our Psychology"}</span>
                             <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
                         </a>
                     </div>
@@ -163,7 +163,7 @@ export default function HomePage() {
 
           </section>
           {/* --- SAANJH RITUAL CALLOUT: PREMIUM SPLIT LAYOUT --- */}
-          <section className="py-40 px-6 md:px-12 bg-warm-cream relative overflow-hidden">
+          <section className="md:px-12 bg-warm-cream relative overflow-hidden py-0 px-12 pt-[100px] pr-12 pb-[90px] pl-12">
             <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
             
             <div className="max-w-7xl mx-auto">
@@ -245,7 +245,6 @@ export default function HomePage() {
                 </div>
             </div>
           </section>
-          
           {/* --- PRODUCT SHOWCASE: MAGAZINE SPREAD --- */}
           <section className="py-32 px-4 bg-warm-cream">
             <div className="max-w-[100rem] mx-auto">

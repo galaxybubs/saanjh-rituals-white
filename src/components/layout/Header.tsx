@@ -22,13 +22,13 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
-            <Image 
-              src="https://static.wixstatic.com/media/b117e9_d1e97e3f959c4c4ca09fa07d3bde5b46~mv2.png" 
-              alt="Saanjh Rituals Logo" 
+            <Image
+              src="https://static.wixstatic.com/media/b117e9_f61ebcac14c94b9594edbff327184c7a~mv2.png"
               width={48}
               height={48}
               className="w-12 h-12 md:w-14 md:h-14 object-contain"
-            />
+              originWidth={1024}
+              originHeight={1024} />
             <div className="flex flex-col items-start gap-0 py-2" style={{ lineHeight: '0.8' }}>
               <span className="font-heading text-2xl md:text-3xl font-bold text-[#A37A52]" style={{
                 letterSpacing: '0.04em',
