@@ -21,7 +21,7 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <span className="font-heading text-3xl md:text-4xl font-bold text-foreground">
+            <span className="font-heading text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#D4AF37] via-[#E8C547] to-[#B8860B] bg-clip-text text-transparent">
               Saanjh
             </span>
           </Link>

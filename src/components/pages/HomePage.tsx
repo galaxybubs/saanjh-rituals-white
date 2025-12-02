@@ -120,8 +120,8 @@ export default function HomePage() {
                 </AnimatedElement>
                 
                 <AnimatedElement delay={200}>
-                    <h1 className="font-heading text-6xl md:text-8xl lg:text-9xl font-bold text-white drop-shadow-2xl mb-8 leading-[0.9] tracking-tight">
-                        Saanjh <br/> <span className="italic font-light text-primary-foreground/90">Rituals</span>
+                    <h1 className="font-heading text-6xl md:text-8xl lg:text-9xl font-bold bg-gradient-to-r from-[#D4AF37] via-[#E8C547] to-[#B8860B] bg-clip-text text-transparent drop-shadow-2xl mb-8 leading-[0.9] tracking-tight">
+                        Saanjh <br/> <span className="italic font-light">Rituals</span>
                     </h1>
                 </AnimatedElement>
 
