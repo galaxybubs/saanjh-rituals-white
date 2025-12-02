@@ -21,22 +21,16 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <div className="flex flex-col items-center leading-[1] -space-y-0">
-              <span className="font-heading text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#2A2A2A] via-[#3D3D1F] to-[#1A1A0F] bg-clip-text text-transparent" style={{
-                textShadow: '0 4px 16px rgba(0, 0, 0, 0.9), 0 0 32px rgba(26, 26, 15, 0.8), inset 0 1px 3px rgba(212, 175, 55, 0.6)',
-                filter: 'drop-shadow(0 3px 6px rgba(0, 0, 0, 0.8))',
-                WebkitTextStroke: '0.6px rgba(212, 175, 55, 0.5)',
-                letterSpacing: '-0.02em',
-                paintOrder: 'stroke fill'
+            <div className="flex flex-col items-center leading-[1] -space-y-1 py-2 px-3">
+              <span className="font-heading text-3xl md:text-4xl font-bold text-[#F5E6D3]" style={{
+                letterSpacing: '0.08em',
+                fontWeight: '700'
               }}>
                 Saanjh
               </span>
-              <span className="font-heading text-xs md:text-sm font-light tracking-[0.15em] bg-gradient-to-r from-[#8B6914] via-[#5C4033] to-[#2A2A2A] bg-clip-text text-transparent" style={{
-                textShadow: '0 3px 12px rgba(0, 0, 0, 0.85), 0 0 24px rgba(139, 105, 20, 0.5)',
-                filter: 'drop-shadow(0 2px 5px rgba(0, 0, 0, 0.75))',
-                WebkitTextStroke: '0.4px rgba(139, 105, 20, 0.6)',
-                letterSpacing: '0.15em',
-                paintOrder: 'stroke fill'
+              <span className="font-heading text-xs md:text-sm font-light tracking-[0.2em] text-[#E8D5C4]" style={{
+                letterSpacing: '0.2em',
+                fontWeight: '300'
               }}>
                 RITUALS
               </span>

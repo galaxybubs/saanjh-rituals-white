@@ -120,22 +120,16 @@ export default function HomePage() {
                 </AnimatedElement>
                 
                 <AnimatedElement delay={200}>
-                    <div className="mb-8 leading-[1] -space-y-0">
-                        <h1 className="font-heading text-6xl md:text-8xl lg:text-9xl font-bold bg-gradient-to-r from-[#2A2A2A] via-[#3D3D1F] to-[#1A1A0F] bg-clip-text text-transparent leading-[0.95] tracking-tight" style={{
-                          textShadow: '0 12px 48px rgba(0, 0, 0, 0.95), 0 0 80px rgba(26, 26, 15, 0.9), inset 0 2px 6px rgba(212, 175, 55, 0.7)',
-                          filter: 'drop-shadow(0 6px 12px rgba(0, 0, 0, 0.9))',
-                          WebkitTextStroke: '0.8px rgba(212, 175, 55, 0.6)',
-                          letterSpacing: '-0.02em',
-                          paintOrder: 'stroke fill'
+                    <div className="mb-8 leading-[1] -space-y-1 py-4 px-6">
+                        <h1 className="font-heading text-6xl md:text-8xl lg:text-9xl font-bold text-[#F5E6D3]" style={{
+                          letterSpacing: '0.08em',
+                          fontWeight: '700'
                         }}>
                             Saanjh
                         </h1>
-                        <p className="font-heading text-2xl md:text-4xl font-light tracking-[0.2em] bg-gradient-to-r from-[#8B6914] via-[#5C4033] to-[#2A2A2A] bg-clip-text text-transparent" style={{
-                          textShadow: '0 8px 32px rgba(0, 0, 0, 0.9), 0 0 60px rgba(139, 105, 20, 0.6)',
-                          filter: 'drop-shadow(0 5px 10px rgba(0, 0, 0, 0.85))',
-                          WebkitTextStroke: '0.6px rgba(139, 105, 20, 0.7)',
+                        <p className="font-heading text-2xl md:text-4xl font-light tracking-[0.2em] text-[#E8D5C4]" style={{
                           letterSpacing: '0.2em',
-                          paintOrder: 'stroke fill'
+                          fontWeight: '300'
                         }}>
                             RITUALS
                         </p>
