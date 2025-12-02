@@ -121,14 +121,14 @@ export default function HomePage() {
                 
                 <AnimatedElement delay={200}>
                     <div className="mb-8 gap-0 py-4 px-6" style={{ lineHeight: '0.8' }}>
-                        <h1 className="font-heading text-6xl md:text-8xl lg:text-9xl font-bold text-[#A37A52]" style={{
+                        <h1 className="font-heading text-6xl md:text-8xl lg:text-9xl font-bold text-[#E8D5C4]" style={{
                           letterSpacing: '0.04em',
                           fontWeight: '700',
                           lineHeight: '0.8'
                         }}>
                             Saanjh
                         </h1>
-                        <p className="font-heading text-2xl md:text-4xl font-light text-[#A37A52]" style={{
+                        <p className="font-heading text-2xl md:text-4xl font-light text-[#E8D5C4]" style={{
                           letterSpacing: '0.2em',
                           fontWeight: '300',
                           lineHeight: '0.8'
