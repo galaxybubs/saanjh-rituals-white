@@ -120,18 +120,20 @@ export default function HomePage() {
                 </AnimatedElement>
                 
                 <AnimatedElement delay={200}>
-                    <div className="mb-8 leading-none -space-y-3">
-                        <h1 className="font-heading text-6xl md:text-8xl lg:text-9xl font-bold bg-gradient-to-r from-[#FFF8DC] via-[#FFD700] to-[#6B5014] bg-clip-text text-transparent leading-[0.9] tracking-tight" style={{
-                          textShadow: '0 8px 32px rgba(0, 0, 0, 0.8), 0 0 60px rgba(255, 215, 0, 0.5), inset 0 2px 0 rgba(255, 255, 255, 0.3)',
-                          filter: 'drop-shadow(0 4px 8px rgba(0, 0, 0, 0.7))',
-                          WebkitTextStroke: '0.6px rgba(107, 80, 20, 0.4)'
+                    <div className="mb-8 leading-none -space-y-2">
+                        <h1 className="font-heading text-6xl md:text-8xl lg:text-9xl font-bold bg-gradient-to-r from-[#F5F5DC] via-[#E8D4B8] to-[#D4AF37] bg-clip-text text-transparent leading-[0.95] tracking-tight" style={{
+                          textShadow: '0 8px 32px rgba(0, 0, 0, 0.85), 0 0 60px rgba(232, 212, 184, 0.5), inset 0 2px 4px rgba(255, 255, 255, 0.5)',
+                          filter: 'drop-shadow(0 4px 8px rgba(0, 0, 0, 0.75))',
+                          WebkitTextStroke: '0.5px rgba(139, 105, 20, 0.35)',
+                          letterSpacing: '-0.02em'
                         }}>
                             Saanjh
                         </h1>
-                        <p className="font-heading text-2xl md:text-4xl font-light tracking-[0.2em] bg-gradient-to-r from-[#8B6914] via-[#6B5014] to-[#4A3728] bg-clip-text text-transparent" style={{
-                          textShadow: '0 5px 20px rgba(0, 0, 0, 0.7), 0 0 40px rgba(139, 105, 20, 0.4)',
-                          filter: 'drop-shadow(0 3px 6px rgba(0, 0, 0, 0.6))',
-                          WebkitTextStroke: '0.4px rgba(74, 55, 40, 0.3)'
+                        <p className="font-heading text-2xl md:text-4xl font-light tracking-[0.2em] bg-gradient-to-r from-[#D4AF37] via-[#C9A961] to-[#A37A52] bg-clip-text text-transparent" style={{
+                          textShadow: '0 5px 20px rgba(0, 0, 0, 0.75), 0 0 40px rgba(212, 175, 55, 0.4)',
+                          filter: 'drop-shadow(0 3px 6px rgba(0, 0, 0, 0.65))',
+                          WebkitTextStroke: '0.4px rgba(107, 80, 20, 0.3)',
+                          letterSpacing: '0.2em'
                         }}>
                             RITUALS
                         </p>
