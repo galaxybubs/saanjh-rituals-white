@@ -74,6 +74,46 @@ const Reveal: React.FC<{ children: React.ReactNode; className?: string; delay?: 
   );
 };
 
+const TextureOverlay = () => (
+  <div className="pointer-events-none fixed inset-0 z-[100] opacity-[0.03] mix-blend-overlay">
+    <svg className="h-full w-full">
+      <filter id="noise">
+        <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch" />
+      </filter>
+      <rect width="100%" height="100%" filter="url(#noise)" />
+    </svg>
+  </div>
+);
+
+const ParallaxImage = ({ src, alt, className, speed = 0.5 }: { src: string; alt: string; className?: string; speed?: number }) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"]
+  });
+  const y = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
+  return (
+    <div ref={ref} className={`overflow-hidden ${className}`}>
+      <motion.div style={{ y }} className="w-full h-[120%] -mt-[10%]">
+        <Image src={src} alt={alt} className="w-full h-full object-cover" width={1200} />
+      </motion.div>
+    </div>
+  );
+};
+
+const MagneticButton = ({ children, className, onClick }: { children: React.ReactNode; className?: string; onClick?: () => void }) => {
+  return (
+    <motion.button
+      className={className}
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      onClick={onClick}
+    >
+      {children}
+    </motion.button>
+  );
+};
+
 // Custom Sticky Section Component for "The Ritual"
 const StickyScrollSection = ({ children }: { children: React.ReactNode }) => {
     return (
