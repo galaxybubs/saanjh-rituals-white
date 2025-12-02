@@ -392,10 +392,6 @@ export default function HomePage() {
               </div>
               {/* Horizontal Scroll Container */}
 
-      //    </section>
-          {/* --- INGREDIENT ALCHEMY: HORIZONTAL SCROLL --- */}
-     //     <section className="py-32 bg-dark-herbal-green text-warm-cream overflow-hidden">
-           
 
             {/* Marquee-like effect wrapper */}
            <div className="relative w-full overflow-x-auto pb-12 hide-scrollbar cursor-grab active:cursor-grabbing"> 
