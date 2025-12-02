@@ -423,7 +423,7 @@ export default function HomePage() {
           </section>
 
       {/* --- FARM TO CUP (Split Layout) --- */}
-      <section className="relative bg-matte-black">
+      <section className="relative bg-black">
         <div className="grid lg:grid-cols-2 min-h-screen">
           {/* Left: Sticky Image */}
           <div className="relative h-[50vh] lg:h-screen lg:sticky lg:top-0 overflow-hidden">
@@ -436,12 +436,16 @@ export default function HomePage() {
           </div>
 
           {/* Right: Scrolling Content */}
-          <div className="flex items-center p-8 md:p-24 lg:p-32 bg-matte-black relative z-10">
+          <div className="flex items-center p-8 md:p-24 lg:p-32 bg-black relative z-10">
             <div className="max-w-xl">
               <Reveal>
                 <div className="flex items-center gap-4 mb-8">
                   <div className="h-[1px] w-12 bg-primary" />
-                  <span className="text-primary uppercase tracking-widest text-sm">Ethical Sourcing</span>
+                                      <AnimatedElement>
+                        <h2 className="font-heading text-5xl md:text-7xl text-foreground mb-4">
+                            Ethical Sourcing
+                        </h2>
+                    </AnimatedElement>
                 </div>
                 <h2 className="font-heading text-5xl md:text-7xl text-warm-cream mb-10">
                   From the Misty Highlands to Your Cup
