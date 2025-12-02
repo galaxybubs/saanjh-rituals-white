@@ -407,9 +407,9 @@ export default function HomePage() {
                     {/* Floating Label */}
                     <div className="absolute bottom-8 left-8 right-8">
                       <div className="bg-matte-black/80 backdrop-blur-md p-6 border-l-2 border-primary transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
-                                            <p className="text-xs font-bold tracking-widest uppercase mb-2 text-destructive-foreground">{ingredient.origin}</p>
+                                            <p className="text-xs font-bold tracking-widest uppercase mb-2 text-secondary">{ingredient.origin}</p>
                         <h3 className="font-heading text-2xl text-warm-cream mb-1">{ingredient.ingredientName}</h3>
-                        <p className="text-xs uppercase tracking-wider mb-2 text-secondary">{ingredient.botanicalName}</p>
+                        <p className="text-xs uppercase tracking-wider mb-2 text-foreground">{ingredient.botanicalName}</p>
                         <p className="text-sm text-soft-rose-beige line-clamp-2">{ingredient.shortDescription}</p>
                       </div>
                     </div>
@@ -449,7 +449,7 @@ export default function HomePage() {
                             <div className="absolute bottom-0 left-0 w-full p-6 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
                                 <p className="text-xs font-bold tracking-widest uppercase text-primary mb-2">{ingredient.origin}</p>
                                 <h3 className="font-heading text-3xl text-white mb-2">{ingredient.ingredientName}</h3>
-                                <p className="text-sm text-white/70 line-clamp-2 group-hover:line-clamp-none transition-all">
+                                <p className="text-sm line-clamp-2 group-hover:line-clamp-none transition-all text-foreground">
                                     {ingredient.botanicalName}
                                 </p>
                             </div>
