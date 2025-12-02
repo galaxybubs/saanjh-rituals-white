@@ -421,69 +421,69 @@ export default function HomePage() {
                 </div>
             </div> 
           </section>
+          {/* --- FARM TO CUP (Split Layout) --- */}
+          <section className="relative bg-black">
+            <div className="grid lg:grid-cols-2 min-h-screen">
+              {/* Left: Sticky Image */}
+              <div className="relative h-[50vh] lg:h-screen lg:sticky lg:top-0 overflow-hidden">
+                <ParallaxImage 
+                  src="https://static.wixstatic.com/media/b117e9_12a3a394cbfb4a6a9b599bda80a918a8~mv2.png?originWidth=1152&originHeight=640" 
+                  alt="Misty tea gardens in Darjeeling" 
+                  className="w-full h-full"
+                />
+                <div className="absolute inset-0 bg-primary/10 mix-blend-overlay" />
+              </div>
 
-      {/* --- FARM TO CUP (Split Layout) --- */}
-      <section className="relative bg-black">
-        <div className="grid lg:grid-cols-2 min-h-screen">
-          {/* Left: Sticky Image */}
-          <div className="relative h-[50vh] lg:h-screen lg:sticky lg:top-0 overflow-hidden">
-            <ParallaxImage 
-              src="https://static.wixstatic.com/media/b117e9_12a3a394cbfb4a6a9b599bda80a918a8~mv2.png?originWidth=1152&originHeight=640" 
-              alt="Misty tea gardens in Darjeeling" 
-              className="w-full h-full"
-            />
-            <div className="absolute inset-0 bg-primary/10 mix-blend-overlay" />
-          </div>
+              {/* Right: Scrolling Content */}
+              <div className="flex items-center p-8 md:p-24 lg:p-32 relative z-10 bg-warm-cream">
+                <div className="max-w-xl">
+                  <Reveal>
+                    <div className="flex items-center gap-4 mb-8">
+                      <div className="h-[1px] w-12 bg-primary" />
+                                        <span className="text-primary uppercase tracking-widest text-sm">Ethical Sourcing</span>
+/*
+                                          <AnimatedElement>
+                            <h2 className="font-heading text-5xl md:text-7xl text-foreground mb-4">
+                                Ethical Sourcing
+                            </h2>
+                        </AnimatedElement>*/
+                    </div>
+                    <h2 className="font-heading text-5xl md:text-7xl text-warm-cream mb-10">
+                      From the Misty Highlands to Your Cup
+                    </h2>
+                    <div className="space-y-8 text-lg text-soft-rose-beige/90 leading-relaxed font-light">
+                      <p>
+                        Every blend begins its journey in the revered tea estates of India. We partner exclusively with small-holder farms that practice biodynamic agriculture, ensuring that every leaf is imbued with the purity of its origin.
+                      </p>
+                      <p>
+                        Hand-plucked at the break of dawn to preserve the morning dew, our leaves are processed using orthodox methods that have been perfected over centuries. This is not just tea; it is a preservation of heritage.
+                      </p>
+                    </div>
+                    
+                    <div className="mt-12 grid grid-cols-2 gap-8 border-t border-primary/20 pt-8">
+                      <div>
+                        <h4 className="font-heading text-3xl text-primary mb-2">100%</h4>
+                        <p className="text-sm text-soft-rose-beige">Single Origin</p>
+                      </div>
+                      <div>
+                        <h4 className="font-heading text-3xl text-primary mb-2">Zero</h4>
+                        <p className="text-sm text-soft-rose-beige">Artificial Additives</p>
+                      </div>
+                    </div>
 
-          {/* Right: Scrolling Content */}
-          <div className="flex items-center p-8 md:p-24 lg:p-32 bg-black relative z-10">
-            <div className="max-w-xl">
-              <Reveal>
-                <div className="flex items-center gap-4 mb-8">
-                  <div className="h-[1px] w-12 bg-primary" />
-                                      <AnimatedElement>
-                        <h2 className="font-heading text-5xl md:text-7xl text-foreground mb-4">
-                            Ethical Sourcing
-                        </h2>
-                    </AnimatedElement>
+                    <div className="mt-12">
+                      <Link to="/about">
+                        <span className="inline-flex items-center gap-3 text-warm-cream hover:text-primary transition-colors cursor-pointer group">
+                          <span className="border-b border-primary/50 pb-1">Read the Full Story</span>
+                          <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
+                        </span>
+                      </Link>
+                    </div>
+                  </Reveal>
                 </div>
-                <h2 className="font-heading text-5xl md:text-7xl text-warm-cream mb-10">
-                  From the Misty Highlands to Your Cup
-                </h2>
-                <div className="space-y-8 text-lg text-soft-rose-beige/90 leading-relaxed font-light">
-                  <p>
-                    Every blend begins its journey in the revered tea estates of India. We partner exclusively with small-holder farms that practice biodynamic agriculture, ensuring that every leaf is imbued with the purity of its origin.
-                  </p>
-                  <p>
-                    Hand-plucked at the break of dawn to preserve the morning dew, our leaves are processed using orthodox methods that have been perfected over centuries. This is not just tea; it is a preservation of heritage.
-                  </p>
-                </div>
-                
-                <div className="mt-12 grid grid-cols-2 gap-8 border-t border-primary/20 pt-8">
-                  <div>
-                    <h4 className="font-heading text-3xl text-primary mb-2">100%</h4>
-                    <p className="text-sm text-soft-rose-beige">Single Origin</p>
-                  </div>
-                  <div>
-                    <h4 className="font-heading text-3xl text-primary mb-2">Zero</h4>
-                    <p className="text-sm text-soft-rose-beige">Artificial Additives</p>
-                  </div>
-                </div>
-
-                <div className="mt-12">
-                  <Link to="/about">
-                    <span className="inline-flex items-center gap-3 text-warm-cream hover:text-primary transition-colors cursor-pointer group">
-                      <span className="border-b border-primary/50 pb-1">Read the Full Story</span>
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
-                    </span>
-                  </Link>
-                </div>
-              </Reveal>
+              </div>
             </div>
-          </div>
-        </div>
-      </section>
-
+          </section>
           {/* --- THE RITUAL: STICKY STEPS --- */}
           <section id="evening-ritual" className="py-32 px-4 bg-soft-rose-beige/30">
             <div className="max-w-[100rem] mx-auto">
