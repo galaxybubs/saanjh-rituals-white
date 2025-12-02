@@ -393,7 +393,38 @@ export default function HomePage() {
               {/* Horizontal Scroll Container */}
 
           </section>
-         
+          {/* --- INGREDIENT ALCHEMY: HORIZONTAL SCROLL --- */}
+          <section className="py-32 bg-dark-herbal-green text-warm-cream overflow-hidden">
+           
+
+            {/* Marquee-like effect wrapper */}
+            <div className="relative w-full overflow-x-auto pb-12 hide-scrollbar cursor-grab active:cursor-grabbing">
+                <div className="flex gap-6 px-4 md:px-12 w-max">
+                    {ingredients.map((ingredient, index) => (
+                        <div 
+                            key={ingredient._id} 
+                            className="relative w-[280px] md:w-[350px] aspect-[3/4] flex-shrink-0 group overflow-hidden rounded-xl bg-black/20"
+                        >
+                            {ingredient.macroImage && (
+                                <Image
+                                    src={ingredient.macroImage}
+                                    alt={ingredient.ingredientName || ''}
+                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
+                                />
+                            )}
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent" />
+                            <div className="absolute bottom-0 left-0 w-full p-6 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                                <p className="text-xs font-bold tracking-widest uppercase text-primary mb-2">{ingredient.origin}</p>
+                                <h3 className="font-heading text-3xl text-white mb-2">{ingredient.ingredientName}</h3>
+                                <p className="text-sm line-clamp-2 group-hover:line-clamp-none transition-all text-foreground">
+                                    {ingredient.botanicalName}
+                                </p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+          </section>
           {/* --- THE RITUAL: STICKY STEPS --- */}
           <section id="evening-ritual" className="py-32 px-4 bg-soft-rose-beige/30">
             <div className="max-w-[100rem] mx-auto">
