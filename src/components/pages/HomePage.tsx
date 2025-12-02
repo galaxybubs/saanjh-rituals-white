@@ -211,7 +211,7 @@ export default function HomePage() {
             </div>
           </section>
           {/* --- PILLARS SECTION: ICONOGRAPHY --- */}
-          <section className="bg-white/50 border-y border-primary/10 py-0 px-4 pt-10 pr-4 pb-5 pl-4">
+          <section className="border-y border-primary/10 py-0 px-4 pt-10 pr-4 pb-5 pl-4 bg-background">
             <div className="max-w-[100rem] mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 divide-y md:divide-y-0 md:divide-x divide-primary/10">
                     {brandPillars.map((pillar, index) => (
