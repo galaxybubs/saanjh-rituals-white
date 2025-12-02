@@ -399,7 +399,7 @@ export default function HomePage() {
 
             {/* Marquee-like effect wrapper */}
             <div className="relative w-full overflow-x-auto pb-12 hide-scrollbar cursor-grab active:cursor-grabbing">
-                <div className="flex gap-6 px-4 md:px-12 w-max">
+                <div className="flex gap-1 px-4 md:px-12 w-max">
                     {ingredients.map((ingredient, index) => (
                         <div 
                             key={ingredient._id} 
