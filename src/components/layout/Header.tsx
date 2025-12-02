@@ -23,7 +23,7 @@ export default function Header() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
             <Image 
-              src="https://static.wixstatic.com/media/b117e9_267170669c2d40f2a10822c6c3a8cc83~mv2.png" 
+              src="https://static.wixstatic.com/media/b117e9_d1e97e3f959c4c4ca09fa07d3bde5b46~mv2.png?id=saanjh-vector-logo" 
               alt="Saanjh Rituals Logo" 
               width={48}
               height={48}
