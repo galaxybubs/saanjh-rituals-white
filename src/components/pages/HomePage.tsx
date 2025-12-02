@@ -3,7 +3,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { BaseCrudService } from '@/integrations';
-import { BrandPillars, RitualTeaBlends, Ingredients, EveningRitualSteps, WellnessBenefits, CustomerTestimonials, SustainabilityOriginPoints } from '@/entities';
+import { BrandPillars, RitualTeaBlends, IngredientsShowcase, Ingredients, EveningRitualSteps, WellnessBenefits, CustomerTestimonials, SustainabilityOriginPoints } from '@/entities';
 import { Image } from '@/components/ui/image';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Star, Leaf, Droplets, Sun, Moon, Wind } from 'lucide-react';
