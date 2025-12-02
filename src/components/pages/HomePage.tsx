@@ -245,8 +245,122 @@ export default function HomePage() {
                 </div>
             </div>
           </section>
+
+
+      {/* --- PRODUCT SHOWCASE (Our Blends) --- */}
+      <section className="py-48 bg-gradient-to-b from-[#FAF8F5] via-[#FEF9F3] to-[#F9F7F3] relative overflow-hidden">
+        {/* Decorative Background Elements */}
+        <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-primary/8 rounded-full blur-3xl -translate-y-1/2 pointer-events-none" />
+        <div className="absolute bottom-0 right-1/3 w-[500px] h-[500px] bg-primary/6 rounded-full blur-3xl translate-y-1/2 pointer-events-none" />
+        
+        <div className="max-w-[120rem] mx-auto px-6 md:px-12 relative z-10">
+          <Reveal className="text-center mb-32">
+            <span className="text-primary uppercase tracking-widest text-sm mb-6 block font-heading">Curated Collections</span>
+            <h2 className="font-heading text-6xl md:text-8xl text-warm-cream mb-8 leading-tight">Our Signature Blends</h2>
+            <p className="text-soft-rose-beige/80 text-lg max-w-2xl mx-auto">Meticulously crafted blends that capture the essence of wellness and tradition in every sip</p>
+          </Reveal>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+            {teaBlends.slice(0, 4).map((blend, index) => (
+              <Reveal key={blend._id} delay={index * 100}>
+                <Link to={`/products/${blend._id}`} className="group block h-full flex flex-col relative">
+                  {/* Card Container with Enhanced Styling */}
+                  <div className="relative flex-1 flex flex-col overflow-hidden rounded-2xl bg-white/80 border border-primary/20 group-hover:border-primary/40 transition-all duration-500 shadow-lg group-hover:shadow-xl group-hover:shadow-primary/10">
+                    
+                    {/* Image Container */}
+                    <div className="relative h-[500px] overflow-hidden flex-shrink-0 bg-white/50">
+                      {/* Image with Zoom Effect */}
+                      <div className="absolute inset-0 transition-transform duration-1200 group-hover:scale-110">
+                        <Image
+                          src={blend.cardImage || 'https://static.wixstatic.com/media/b117e9_ddff244408f54d859c8341af85e11244~mv2.png?originWidth=640&originHeight=576'}
+                          alt={blend.name || 'Tea Blend'}
+                          className="w-full h-full object-cover opacity-85 group-hover:opacity-100 transition-opacity duration-700"
+                          width={700}
+                        />
+                      </div>
+                      
+                      {/* Enhanced Gradient Overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/40 to-transparent opacity-70 group-hover:opacity-40 transition-opacity duration-500" />
+                      
+                      {/* Hover Content Overlay */}
+                      <div className="absolute inset-0 p-8 flex flex-col justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        {/* Top: Explore Icon */}
+                        <div className="flex justify-end">
+                          <div className="w-14 h-14 rounded-full bg-primary text-matte-black flex items-center justify-center shadow-2xl backdrop-blur-md border border-white/20 group-hover:scale-110 transition-transform duration-300">
+                            <ArrowRight className="w-7 h-7 -rotate-45" />
+                          </div>
+                        </div>
+                        
+                        {/* Bottom: Tasting Notes & Benefits */}
+                        <div className="space-y-4 bg-white/80 backdrop-blur-lg p-6 rounded-2xl border border-primary/20">
+                          {blend.tastingNotes && (
+                            <div className="space-y-2">
+                              <p className="text-primary font-heading text-xs uppercase tracking-[0.15em] font-semibold">Tasting Notes</p>
+                              <p className="text-warm-cream font-heading text-sm leading-relaxed">{blend.tastingNotes}</p>
+                            </div>
+                          )}
+                          {blend.benefits && (
+                            <div className="space-y-2 pt-3 border-t border-white/10">
+                              <p className="text-soft-rose-beige/90 font-heading text-xs uppercase tracking-[0.15em] font-semibold">Wellness Benefits</p>
+                              <p className="text-warm-cream/85 text-xs leading-relaxed">{blend.benefits}</p>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Text Content Below Image */}
+                    <div className="flex-1 p-8 md:p-10 flex flex-col justify-center items-center text-center space-y-5 bg-gradient-to-b from-white/40 via-white/20 to-white/10 backdrop-blur-sm border-t border-primary/10">
+                      <div className="space-y-4 w-full">
+                        <motion.h3 
+                          className="font-heading text-3xl md:text-2xl text-warm-cream group-hover:text-primary transition-colors duration-300 leading-tight"
+                          whileHover={{ scale: 1.05 }}
+                        >
+                          {blend.name}
+                        </motion.h3>
+                        
+                        {/* Animated Divider */}
+                        <motion.div 
+                          className="w-12 h-[3px] bg-gradient-to-r from-transparent via-primary to-transparent mx-auto group-hover:w-20 transition-all duration-500"
+                          initial={{ width: '3rem' }}
+                          whileHover={{ width: '5rem' }}
+                        />
+                        
+                        {/* Premium Label */}
+                        <motion.div
+                          initial={{ opacity: 0.7 }}
+                          whileHover={{ opacity: 1 }}
+                          className="inline-block mx-auto"
+                        >
+                          <span className="text-soft-rose-beige text-xs uppercase tracking-[0.15em] font-heading px-4 py-2 border border-primary/50 rounded-full group-hover:border-primary/80 group-hover:bg-primary/15 transition-all duration-300 bg-white/[0.03]">
+                            Premium Blend
+                          </span>
+                        </motion.div>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
+
+          <div className="mt-32 text-center">
+            <Link to="/store">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Button className="bg-primary text-matte-black hover:bg-warm-cream px-14 py-7 text-lg rounded-full transition-all duration-300 font-heading shadow-lg hover:shadow-2xl hover:shadow-primary/50">
+                  View All Collections
+                </Button>
+              </motion.div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
           {/* --- PRODUCT SHOWCASE: MAGAZINE SPREAD --- */}
-          <section className="py-32 px-4 bg-warm-cream">
+          <section className="py-32 px-4 bg-warm-cream pt-[90px] pr-4 pb-32 pl-4">
             <div className="max-w-[100rem] mx-auto">
                 <div className="flex flex-col md:flex-row justify-between items-end mb-20 px-4">
                     <AnimatedElement>
