@@ -128,7 +128,8 @@ const StickyScrollSection = ({ children }: { children: React.ReactNode }) => {
 export default function HomePage() {
   // --- DATA FIDELITY PROTOCOL: CANONICAL DATA SOURCES ---
   const [brandPillars, setBrandPillars] = useState<BrandPillars[]>([]);
-  const [teaBlends, setTeaBlends] = useState<RitualTeaBlends[]>([]);
+    const [teaBlends, setTeaBlends] = useState<TeaBlends[]>([]);
+  //const [teaBlends, setTeaBlends] = useState<RitualTeaBlends[]>([]);
   const [ingredients, setIngredients] = useState<Ingredients[]>([]);
   const [ritualSteps, setRitualSteps] = useState<EveningRitualSteps[]>([]);
   const [wellnessBenefits, setWellnessBenefits] = useState<WellnessBenefits[]>([]);
