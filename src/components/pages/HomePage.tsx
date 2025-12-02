@@ -161,10 +161,7 @@ export default function HomePage() {
                 </AnimatedElement>
             </div>
 
-            {/* Scroll Indicator */}
-            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 animate-bounce duration-[2000ms]">
-                <div className="w-[1px] h-16 bg-gradient-to-b from-white to-transparent opacity-50"></div>
-            </div>
+
           </section>
           {/* --- MANIFESTO SECTION: TYPOGRAPHIC EDITORIAL --- */}
           <section className="py-32 px-6 md:px-12 bg-warm-cream relative overflow-hidden">
