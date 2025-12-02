@@ -141,7 +141,7 @@ export default function HomePage() {
                 <AnimatedElement delay={400}>
                     <p className="font-paragraph text-lg md:text-2xl text-white/90 max-w-2xl mx-auto mb-12 font-light leading-relaxed drop-shadow-lg">
                         Ancestral botanicals meet golden-hour calm. <br className="hidden md:block"/>
-                        A ritual rebirth for evening grounding.
+                        Handcrafted blends for the modern soul.
                     </p>
                 </AnimatedElement>
 
