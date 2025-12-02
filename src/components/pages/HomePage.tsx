@@ -379,7 +379,7 @@ export default function HomePage() {
             </div>
           </section>
           {/* --- INGREDIENT MACRO CINEMATIC --- */}
-          <section className="py-32 overflow-hidden bg-dark-herbal-green">
+          <section className="py-32 overflow-hidden bg-dark-herbal-green overflow-hidden">
               <div className="max-w-[120rem] mx-auto px-6 mb-16 flex justify-between items-end">
                 <Reveal>
                   <h2 className="font-heading text-5xl md:text-7xl text-warm-cream">Botanical <br /><span className="text-primary italic">Alchemy</span></h2>
