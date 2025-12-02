@@ -161,29 +161,51 @@ export default function HomePage() {
                 </AnimatedElement>
             </div>
 
-
           </section>
-          {/* --- MANIFESTO SECTION: TYPOGRAPHIC EDITORIAL --- */}
-          <section className="py-32 px-6 md:px-12 bg-warm-cream relative overflow-hidden">
+          {/* --- SAANJH RITUAL CALLOUT: PREMIUM SPLIT LAYOUT --- */}
+          <section className="py-40 px-6 md:px-12 bg-warm-cream relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
             
-            <div className="max-w-5xl mx-auto text-center">
-                <AnimatedElement>
-                    <h2 className="font-heading text-4xl md:text-6xl text-foreground leading-tight mb-12">
-                        "In the quiet glow of evening, when the world softens and the sky turns gold, there exists a sacred pause."
-                    </h2>
-                </AnimatedElement>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 text-left">
-                    <AnimatedElement delay={200}>
-                        <p className="text-lg text-foreground/70 leading-relaxed">
-                            Saanjh—the golden hour—is more than a moment in time. It is a ritual of return, a gentle invitation to ground yourself in ancestral wisdom. We believe in the power of slowing down, of savoring the transition from day to night.
-                        </p>
-                    </AnimatedElement>
-                    <AnimatedElement delay={400}>
-                        <p className="text-lg text-foreground/70 leading-relaxed">
-                            Each blend is a meditation, crafted from rare Ayurvedic botanicals sourced from the foothills of the Himalayas. We honor the slow, the sensory, the sacred. This is wellness as it was meant to be—rooted in heritage, elevated by intention.
-                        </p>
+            <div className="max-w-7xl mx-auto">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-center">
+                    {/* Left: Text Content */}
+                    <div>
+                        <AnimatedElement>
+                            <span className="text-primary font-bold tracking-widest uppercase text-sm mb-6 block">The Saanjh Ritual</span>
+                            <h2 className="font-heading text-5xl md:text-7xl text-foreground leading-tight mb-10">
+                                "In the quiet glow of evening, when the world softens and the sky turns gold, there exists a sacred pause."
+                            </h2>
+                        </AnimatedElement>
+                        
+                        <div className="space-y-6">
+                            <AnimatedElement delay={200}>
+                                <p className="text-xl text-foreground/85 leading-relaxed font-light">
+                                    Saanjh—the golden hour—is more than a moment in time. It is a ritual of return, a gentle invitation to ground yourself in ancestral wisdom. We believe in the power of slowing down, of savoring the transition from day to night.
+                                </p>
+                            </AnimatedElement>
+                            <AnimatedElement delay={400}>
+                                <p className="text-xl text-foreground/85 leading-relaxed font-light">
+                                    Each blend is a meditation, crafted from rare Ayurvedic botanicals sourced from the foothills of the Himalayas. We honor the slow, the sensory, the sacred. This is wellness as it was meant to be—rooted in heritage, elevated by intention.
+                                </p>
+                            </AnimatedElement>
+                            <AnimatedElement delay={600}>
+                                <p className="text-lg text-foreground/70 leading-relaxed italic border-l-4 border-primary pl-6 py-4">
+                                    "Saanjh is not just about what you drink—it's about who you become when you pause, breathe, and reconnect with the ancient wisdom flowing through your veins."
+                                </p>
+                            </AnimatedElement>
+                        </div>
+                    </div>
+
+                    {/* Right: Decorative Visual */}
+                    <AnimatedElement delay={300} className="h-full">
+                        <div className="relative h-[500px] lg:h-[600px] rounded-3xl overflow-hidden shadow-2xl">
+                            <Image
+                                src="https://static.wixstatic.com/media/b117e9_10da8a33b781414794e9cc8274613802~mv2.png?originWidth=1664&originHeight=896"
+                                alt="Golden hour ritual with chai steam and macro spices"
+                                className="w-full h-full object-cover"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                        </div>
                     </AnimatedElement>
                 </div>
             </div>
@@ -408,54 +430,19 @@ export default function HomePage() {
                 </div>
             </div>
           </section>
-          {/* --- BRAND STORY: SPLIT LAYOUT --- */}
-          <section className="py-0 bg-secondary/10">
-            <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[80vh]">
-                <div className="relative h-[50vh] lg:h-auto overflow-hidden">
-                    <Image
-                        src="https://static.wixstatic.com/media/b117e9_ece8ce6841114d2483e10cfd5257c467~mv2.png?originWidth=1280&originHeight=704"
-                        alt="Golden ingredients and botanicals"
-                        className="absolute inset-0 w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-black/10" />
-                </div>
-                <div className="flex items-center justify-center p-12 lg:p-24 bg-warm-cream">
-                    <div className="max-w-xl">
-                        <AnimatedElement>
-                            <h2 className="font-heading text-5xl md:text-6xl text-foreground mb-8">
-                                Rooted in <br/><span className="text-primary italic">Heritage</span>
-                            </h2>
-                        </AnimatedElement>
-                        <AnimatedElement delay={200}>
-                            <p className="text-lg text-foreground/70 mb-6 leading-relaxed">
-                                Saanjh was born from a desire to reclaim the evening as a time of sacred rest. Inspired by the ancient Indian practice of 'Sandhya'—the twilight hour—we create blends that honor the transition from day to night.
-                            </p>
-                            <p className="text-lg text-foreground/70 mb-10 leading-relaxed">
-                                Our founder grew up surrounded by the scent of cardamom and the warmth of evening chai. Today, we bring that same sense of grounding and connection to your modern ritual.
-                            </p>
-                        </AnimatedElement>
-                        <AnimatedElement delay={400}>
-                            <Link to="/about">
-                                <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-full px-8 py-6">
-                                    Read Our Story
-                                </Button>
-                            </Link>
-                        </AnimatedElement>
-                    </div>
-                </div>
-            </div>
-          </section>
-          {/* --- WELLNESS BENEFITS: GRID --- */}
-          <section className="py-32 px-4 bg-warm-cream">
-            <div className="max-w-[100rem] mx-auto">
-                <div className="text-center mb-20">
+          {/* --- WELLNESS BENEFITS: PREMIUM GRID CALLOUT --- */}
+          <section className="py-40 px-6 md:px-12 bg-warm-cream relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+            
+            <div className="max-w-7xl mx-auto">
+                <div className="text-center mb-24">
                     <AnimatedElement>
-                        <h2 className="font-heading text-5xl md:text-6xl text-foreground mb-6">
+                        <span className="text-primary font-bold tracking-widest uppercase text-sm mb-6 block">Holistic Wellness</span>
+                        <h2 className="font-heading text-5xl md:text-7xl text-foreground mb-8">
                             Holistic Harmony
                         </h2>
-                        <p className="text-lg text-foreground/60 max-w-2xl mx-auto">
-                            Beyond taste, our blends are crafted for feeling. 
-                            Targeted botanical benefits for mind, body, and spirit.
+                        <p className="text-xl text-foreground/70 max-w-3xl mx-auto leading-relaxed">
+                            Beyond taste, our blends are crafted for feeling. Each botanical is selected for its targeted benefits—nourishing mind, body, and spirit with the wisdom of ancient Ayurvedic traditions.
                         </p>
                     </AnimatedElement>
                 </div>
@@ -463,8 +450,8 @@ export default function HomePage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {wellnessBenefits.map((benefit, index) => (
                         <AnimatedElement key={benefit._id} delay={index * 100}>
-                            <div className="group h-full p-8 rounded-2xl border border-primary/20 bg-white hover:border-primary transition-colors duration-500 hover:shadow-lg hover:shadow-primary/5 flex flex-col items-center text-center">
-                                <div className="mb-6 w-full h-48 overflow-hidden rounded-xl bg-warm-cream">
+                            <div className="group h-full p-8 rounded-3xl border border-primary/20 bg-white hover:border-primary transition-all duration-500 hover:shadow-xl hover:shadow-primary/10 flex flex-col items-center text-center hover:-translate-y-2">
+                                <div className="mb-8 w-full h-56 overflow-hidden rounded-2xl bg-warm-cream">
                                     {benefit.benefitImage && (
                                         <Image
                                             src={benefit.benefitImage}
@@ -473,10 +460,10 @@ export default function HomePage() {
                                         />
                                     )}
                                 </div>
-                                <h3 className="font-heading text-2xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
+                                <h3 className="font-heading text-3xl font-semibold text-foreground mb-4 group-hover:text-primary transition-colors">
                                     {benefit.benefitTitle}
                                 </h3>
-                                <p className="text-foreground/70 leading-relaxed">
+                                <p className="text-foreground/70 leading-relaxed text-lg">
                                     {benefit.benefitDescription}
                                 </p>
                             </div>
@@ -576,23 +563,41 @@ export default function HomePage() {
                 </div>
             </div>
           </section>
-          {/* --- SUSTAINABILITY: EARTHY & GROUNDED --- */}
-          <section className="py-32 px-4 bg-[#EBE5DE]">
-            <div className="max-w-[100rem] mx-auto">
-                <div className="flex flex-col md:flex-row justify-between items-end mb-20 border-b border-foreground/10 pb-8">
+          {/* --- SUSTAINABILITY: PREMIUM CALLOUT --- */}
+          <section className="py-40 px-6 md:px-12 bg-[#EBE5DE] relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+            
+            <div className="max-w-7xl mx-auto">
+                <div className="text-center mb-24">
                     <AnimatedElement>
-                        <h2 className="font-heading text-5xl md:text-6xl text-foreground mb-4">
+                        <span className="text-primary font-bold tracking-widest uppercase text-sm mb-6 block">Our Commitment</span>
+                        <h2 className="font-heading text-5xl md:text-7xl text-foreground mb-8">
                             Conscious Origin
                         </h2>
-                        <p className="text-lg text-foreground/60 max-w-md">
-                            We honor the earth that nourishes us.
+                        <p className="text-xl text-foreground/70 max-w-3xl mx-auto leading-relaxed">
+                            We honor the earth that nourishes us. Every botanical is sourced with intention, every partnership built on respect. Sustainability isn't a feature—it's the foundation of everything we create.
                         </p>
                     </AnimatedElement>
-                    <AnimatedElement delay={200}>
-                        <div className="flex gap-4 mt-6 md:mt-0">
-                            <Leaf className="w-8 h-8 text-dark-herbal-green" />
-                            <Sun className="w-8 h-8 text-primary" />
-                            <Droplets className="w-8 h-8 text-blue-900/60" />
+                    <AnimatedElement delay={200} className="mt-12">
+                        <div className="flex justify-center gap-8">
+                            <div className="flex flex-col items-center gap-3">
+                                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                                    <Leaf className="w-8 h-8 text-dark-herbal-green" />
+                                </div>
+                                <span className="text-sm font-bold uppercase tracking-widest text-foreground/70">Ethically Sourced</span>
+                            </div>
+                            <div className="flex flex-col items-center gap-3">
+                                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                                    <Sun className="w-8 h-8 text-primary" />
+                                </div>
+                                <span className="text-sm font-bold uppercase tracking-widest text-foreground/70">Regenerative</span>
+                            </div>
+                            <div className="flex flex-col items-center gap-3">
+                                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                                    <Droplets className="w-8 h-8 text-blue-900/60" />
+                                </div>
+                                <span className="text-sm font-bold uppercase tracking-widest text-foreground/70">Pure & Clean</span>
+                            </div>
                         </div>
                     </AnimatedElement>
                 </div>
@@ -605,7 +610,7 @@ export default function HomePage() {
                             { title: point.point3Title, desc: point.point3Description, img: point.point3Image }
                         ].map((item, idx) => (
                             <AnimatedElement key={idx} delay={idx * 150} className="group">
-                                <div className="mb-6 overflow-hidden rounded-2xl aspect-[4/3]">
+                                <div className="mb-8 overflow-hidden rounded-3xl aspect-[4/3]">
                                     {item.img && (
                                         <Image
                                             src={item.img}
@@ -614,10 +619,10 @@ export default function HomePage() {
                                         />
                                     )}
                                 </div>
-                                <h3 className="font-heading text-2xl font-semibold text-foreground mb-3">
+                                <h3 className="font-heading text-3xl font-semibold text-foreground mb-4">
                                     {item.title}
                                 </h3>
-                                <p className="text-foreground/70 leading-relaxed text-sm">
+                                <p className="text-foreground/70 leading-relaxed text-lg">
                                     {item.desc}
                                 </p>
                             </AnimatedElement>
