@@ -25,7 +25,27 @@ export interface BrandPillars {
   callToActionUrl?: string;
 }
 
-
+/**
+ * Collection ID: ingredientsshowcase
+ * Interface for IngredientsShowcase
+ */
+export interface IngredientsShowcase {
+  _id: string;
+  _createdDate?: Date;
+  _updatedDate?: Date;
+  /** @wixFieldType text */
+  ingredientName?: string;
+  /** @wixFieldType image */
+  macroImage?: string;
+  /** @wixFieldType text */
+  imageAltText?: string;
+  /** @wixFieldType text */
+  botanicalName?: string;
+  /** @wixFieldType text */
+  shortDescription?: string;
+  /** @wixFieldType text */
+  originCountry?: string;
+}
 /**
  * Collection ID: customertestimonials
  * Interface for CustomerTestimonials
