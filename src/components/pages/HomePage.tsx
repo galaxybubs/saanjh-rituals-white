@@ -116,7 +116,7 @@ export default function HomePage() {
             {/* Content Layer */}
             <div className="relative z-10 text-center px-4 max-w-[100rem] mx-auto flex flex-col items-center">
                 <AnimatedElement>
-                    <span className="inline-block py-1 px-3 border border-white/30 rounded-full text-xs font-medium tracking-[0.2em] text-white uppercase mb-6 backdrop-blur-sm">{"Est. ANCIENT INDIA"}</span>
+                    <span className="inline-block py-1 px-3 border border-white/30 rounded-full text-xs font-medium tracking-[0.2em] text-white uppercase mb-6 backdrop-blur-sm">{"rooted in ANCIENT INDIAn heritage"}</span>
                 </AnimatedElement>
                 
                 <AnimatedElement delay={200}>
