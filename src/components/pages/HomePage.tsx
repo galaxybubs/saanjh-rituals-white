@@ -120,16 +120,18 @@ export default function HomePage() {
                 </AnimatedElement>
                 
                 <AnimatedElement delay={200}>
-                    <div className="mb-8">
-                        <h1 className="font-heading text-6xl md:text-8xl lg:text-9xl font-bold bg-gradient-to-r from-[#D4AF37] via-[#E8C547] to-[#B8860B] bg-clip-text text-transparent leading-[0.9] tracking-tight" style={{
-                          textShadow: '0 4px 20px rgba(0, 0, 0, 0.6), 0 0 40px rgba(212, 175, 55, 0.3)',
-                          filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5))'
+                    <div className="mb-8 leading-none">
+                        <h1 className="font-heading text-6xl md:text-8xl lg:text-9xl font-bold bg-gradient-to-r from-[#F4E4C1] via-[#E8C547] to-[#8B6914] bg-clip-text text-transparent leading-[0.95] tracking-tight" style={{
+                          textShadow: '0 6px 24px rgba(0, 0, 0, 0.7), 0 0 50px rgba(232, 197, 71, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2)',
+                          filter: 'drop-shadow(0 3px 6px rgba(0, 0, 0, 0.6))',
+                          WebkitTextStroke: '0.5px rgba(139, 105, 20, 0.3)'
                         }}>
                             Saanjh
                         </h1>
-                        <p className="font-heading text-2xl md:text-4xl font-light tracking-[0.2em] bg-gradient-to-r from-[#D4AF37] via-[#E8C547] to-[#B8860B] bg-clip-text text-transparent mt-2" style={{
-                          textShadow: '0 4px 20px rgba(0, 0, 0, 0.6), 0 0 40px rgba(212, 175, 55, 0.3)',
-                          filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5))'
+                        <p className="font-heading text-2xl md:text-4xl font-light tracking-[0.2em] bg-gradient-to-r from-[#D4AF37] via-[#A37A52] to-[#6B5344] bg-clip-text text-transparent -mt-1" style={{
+                          textShadow: '0 4px 16px rgba(0, 0, 0, 0.6), 0 0 30px rgba(163, 122, 82, 0.3)',
+                          filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5))',
+                          WebkitTextStroke: '0.3px rgba(107, 83, 68, 0.2)'
                         }}>
                             RITUALS
                         </p>

@@ -21,11 +21,11 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <div className="flex flex-col items-center leading-none">
-              <span className="font-heading text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#D4AF37] via-[#E8C547] to-[#B8860B] bg-clip-text text-transparent">
+            <div className="flex flex-col items-center leading-none -space-y-1">
+              <span className="font-heading text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#E8C547] via-[#D4AF37] to-[#8B6914] bg-clip-text text-transparent">
                 Saanjh
               </span>
-              <span className="font-heading text-xs md:text-sm font-light tracking-[0.15em] bg-gradient-to-r from-[#D4AF37] via-[#E8C547] to-[#B8860B] bg-clip-text text-transparent">
+              <span className="font-heading text-xs md:text-sm font-light tracking-[0.15em] bg-gradient-to-r from-[#C9A961] via-[#A37A52] to-[#6B5344] bg-clip-text text-transparent">
                 RITUALS
               </span>
             </div>
