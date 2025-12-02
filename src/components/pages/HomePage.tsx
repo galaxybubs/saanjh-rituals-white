@@ -129,9 +129,12 @@ export default function HomePage() {
   // --- DATA FIDELITY PROTOCOL: CANONICAL DATA SOURCES ---
   const [brandPillars, setBrandPillars] = useState<BrandPillars[]>([]);
     const [teaBlends, setTeaBlends] = useState<TeaBlends[]>([]);
+    const [ingredients, setIngredients] = useState<IngredientsShowcase[]>([]);
+      const [ritualSteps, setRitualSteps] = useState<EveningRitualSteps[]>([]);
+
   //const [teaBlends, setTeaBlends] = useState<RitualTeaBlends[]>([]);
-  const [ingredients, setIngredients] = useState<Ingredients[]>([]);
-  const [ritualSteps, setRitualSteps] = useState<EveningRitualSteps[]>([]);
+ // const [ingredients, setIngredients] = useState<Ingredients[]>([]);
+ // const [ritualSteps, setRitualSteps] = useState<EveningRitualSteps[]>([]);
   const [wellnessBenefits, setWellnessBenefits] = useState<WellnessBenefits[]>([]);
   const [testimonials, setTestimonials] = useState<CustomerTestimonials[]>([]);
   const [sustainabilityPoints, setSustainabilityPoints] = useState<SustainabilityOriginPoints[]>([]);
