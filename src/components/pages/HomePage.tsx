@@ -120,7 +120,7 @@ export default function HomePage() {
                 </AnimatedElement>
                 
                 <AnimatedElement delay={200}>
-                    <div className="mb-8 leading-[1] -space-y-0.5 py-4 px-6">
+                    <div className="mb-8 leading-[1] -space-y-[0.0625rem] py-4 px-6">
                         <h1 className="font-heading text-6xl md:text-8xl lg:text-9xl font-bold text-[#A37A52]" style={{
                           letterSpacing: '0.04em',
                           fontWeight: '700'
