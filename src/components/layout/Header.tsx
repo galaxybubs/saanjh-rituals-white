@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import { Image } from '@/components/ui/image';
 import { MiniCart } from '@/wix-verticals/react-pages/react-router/routes/root';
 
 export default function Header() {
@@ -20,9 +21,16 @@ export default function Header() {
       <div className="max-w-[100rem] mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <div className="flex flex-col items-center gap-0 py-2 px-3" style={{ lineHeight: '0.8' }}>
-              <span className="font-heading text-3xl md:text-4xl font-bold text-[#A37A52]" style={{
+          <Link to="/" className="flex items-center gap-3">
+            <Image 
+              src="https://static.wixstatic.com/media/b117e9_267170669c2d40f2a10822c6c3a8cc83~mv2.png" 
+              alt="Saanjh Rituals Logo" 
+              width={48}
+              height={48}
+              className="w-12 h-12 md:w-14 md:h-14 object-contain"
+            />
+            <div className="flex flex-col items-start gap-0 py-2" style={{ lineHeight: '0.8' }}>
+              <span className="font-heading text-2xl md:text-3xl font-bold text-[#A37A52]" style={{
                 letterSpacing: '0.04em',
                 fontWeight: '700',
                 lineHeight: '0.8'
