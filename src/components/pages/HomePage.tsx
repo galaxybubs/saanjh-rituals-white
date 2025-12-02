@@ -392,13 +392,13 @@ export default function HomePage() {
               </div>
               {/* Horizontal Scroll Container */}
 
-          </section>
+      //    </section>
           {/* --- INGREDIENT ALCHEMY: HORIZONTAL SCROLL --- */}
-          <section className="py-32 bg-dark-herbal-green text-warm-cream overflow-hidden relative w-full overflow-x-auto pb-12 hide-scrollbar cursor-grab active:cursor-grabbing">
+     //     <section className="py-32 bg-dark-herbal-green text-warm-cream overflow-hidden">
            
 
             {/* Marquee-like effect wrapper */}
-         /*  <div className="relative w-full overflow-x-auto pb-12 hide-scrollbar cursor-grab active:cursor-grabbing"> */
+           <div className="relative w-full overflow-x-auto pb-12 hide-scrollbar cursor-grab active:cursor-grabbing"> 
                 <div className="flex gap-6 px-4 md:px-12 w-max">
                     {ingredients.map((ingredient, index) => (
                         <div 
@@ -423,7 +423,7 @@ export default function HomePage() {
                         </div>
                     ))}
                 </div>
-       /*     </div> */
+            </div> 
           </section>
           {/* --- THE RITUAL: STICKY STEPS --- */}
           <section id="evening-ritual" className="py-32 px-4 bg-soft-rose-beige/30">
