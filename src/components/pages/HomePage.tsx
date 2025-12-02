@@ -152,6 +152,7 @@ export default function HomePage() {
                                 Shop Ritual Blends
                             </Button>
                         </Link>
+                        <div className="hidden sm:block w-px h-8 bg-white/30" />
                         <a href="#evening-ritual" className="group flex items-center gap-2 text-white hover:text-primary transition-colors duration-300">
                             <span className="text-lg border-b border-transparent group-hover:border-primary pb-1">Explore the Ritual</span>
                             <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
