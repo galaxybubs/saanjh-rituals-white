@@ -21,16 +21,18 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <div className="flex flex-col items-center leading-none gap-0 py-2 px-3">
+            <div className="flex flex-col items-center gap-0 py-2 px-3" style={{ lineHeight: '0.8' }}>
               <span className="font-heading text-3xl md:text-4xl font-bold text-[#A37A52]" style={{
                 letterSpacing: '0.04em',
-                fontWeight: '700'
+                fontWeight: '700',
+                lineHeight: '0.8'
               }}>
                 Saanjh
               </span>
               <span className="font-heading text-xs md:text-sm font-light text-[#A37A52]" style={{
                 letterSpacing: '0.2em',
-                fontWeight: '300'
+                fontWeight: '300',
+                lineHeight: '0.8'
               }}>
                 RITUALS
               </span>
