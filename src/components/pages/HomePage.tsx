@@ -160,7 +160,7 @@ export default function HomePage() {
       );
 
       setBrandPillars(pillarsData.items.sort((a, b) => (a.displayOrder || 0) - (b.displayOrder || 0)));
-      setTeaBlends(blendsWithNotes.slice(0, 4));
+      setTeaBlends(blendsWithNotes.slice(0, 6));
       setIngredients(ingredientsData.items.slice(0, 6));
       setRitualSteps(stepsData.items.sort((a, b) => (a.stepNumber || 0) - (b.stepNumber || 0)));
       setWellnessBenefits(benefitsData.items.filter(b => b.isActive).sort((a, b) => (a.displayOrder || 0) - (b.displayOrder || 0)).slice(0, 6));
