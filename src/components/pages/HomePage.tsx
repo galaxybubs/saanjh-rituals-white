@@ -389,60 +389,60 @@ export default function HomePage() {
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                                         
                                         {/* Unique Overlay Descriptor - Appears on Hover */}
-                                        <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                                        <div className="absolute inset-0 flex flex-col justify-end p-5 md:p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
                                             {/* Elegant Divider */}
-                                            <div className="mb-4 flex items-center gap-3">
+                                            <div className="mb-3 flex items-center gap-2">
                                                 <div className="h-px flex-1 bg-gradient-to-r from-primary via-primary/50 to-transparent" />
-                                                <span className="text-xs font-bold tracking-[0.2em] uppercase text-primary/80 whitespace-nowrap">{overlayDesc.keyword}</span>
+                                                <span className="text-xs font-bold tracking-[0.15em] uppercase text-primary/90 whitespace-nowrap">{overlayDesc.keyword}</span>
                                             </div>
                                             
                                             {/* Unique Overlay Descriptor - NOT Tasting Notes */}
-                                            <p className="font-paragraph text-base md:text-lg text-warm-cream leading-relaxed font-light">
+                                            <p className="font-paragraph text-sm md:text-base text-warm-cream leading-relaxed font-light mb-4">
                                                 {overlayDesc.descriptor}
                                             </p>
                                             
                                             {/* Healing USP - Premium Accent Badge */}
-                                            <div className="mt-4 pt-4 border-t border-primary/30 flex items-center gap-3">
-                                                <div className="w-2 h-2 rounded-full bg-gradient-to-r from-primary to-secondary" />
-                                                <span className="text-xs font-bold tracking-widest uppercase text-primary">{blend.healingUSP || 'Ritual Blend'}</span>
+                                            <div className="pt-3 border-t border-primary/30 flex items-center gap-2">
+                                                <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-primary to-secondary" />
+                                                <span className="text-xs font-bold tracking-widest uppercase text-primary/90">{blend.healingUSP || 'Ritual Blend'}</span>
                                             </div>
                                         </div>
                                     </div>
                                     
                                     {/* Product Info Section */}
-                                    <div className="flex justify-between items-start border-t border-foreground/10 pt-4 mb-5">
+                                    <div className="flex justify-between items-start border-t border-foreground/10 pt-3 mb-4">
                                         <div>
-                                            <h3 className="font-heading text-2xl font-medium text-foreground mb-1 group-hover:text-primary transition-colors duration-300">
+                                            <h3 className="font-heading text-xl font-medium text-foreground mb-1 group-hover:text-primary transition-colors duration-300">
                                                 {blend.blendName}
                                             </h3>
                                             <p className="font-paragraph text-xs text-foreground/60 max-w-xs leading-relaxed">
                                                 {blend.keyBenefits}
                                             </p>
                                         </div>
-                                        <span className="font-paragraph text-lg font-medium text-foreground whitespace-nowrap ml-3">
+                                        <span className="font-paragraph text-base font-medium text-foreground whitespace-nowrap ml-2">
                                             ${blend.price?.toFixed(2)}
                                         </span>
                                     </div>
 
                                     {/* Premium Flavor Profile Card - Immersive & Aesthetic */}
-                                    <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-warm-cream via-white to-soft-rose-beige/30 border border-primary/15 p-5 transition-all duration-700 group-hover:border-primary/30 group-hover:shadow-lg group-hover:shadow-primary/10 backdrop-blur-sm">
+                                    <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-warm-cream via-white to-soft-rose-beige/30 border border-primary/15 p-4 transition-all duration-700 group-hover:border-primary/30 group-hover:shadow-lg group-hover:shadow-primary/10 backdrop-blur-sm">
                                         {/* Decorative top accent gradient */}
-                                        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-60" />
+                                        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-60" />
                                         
                                         {/* Subtle background pattern accent */}
                                         <div className="absolute inset-0 opacity-30 pointer-events-none">
-                                            <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl" />
+                                            <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-full blur-2xl" />
                                         </div>
                                         
                                         <div className="relative z-10">
                                             {/* Premium label with accent */}
-                                            <div className="flex items-center gap-3 mb-4">
-                                                <div className="w-1 h-3 bg-gradient-to-b from-primary to-secondary rounded-full" />
-                                                <span className="text-xs font-bold tracking-widest uppercase text-primary/80 letter-spacing-wide">Flavor Profile</span>
+                                            <div className="flex items-center gap-2 mb-3">
+                                                <div className="w-0.5 h-2 bg-gradient-to-b from-primary to-secondary rounded-full" />
+                                                <span className="text-xs font-bold tracking-widest uppercase text-primary/80">Flavor Profile</span>
                                             </div>
                                             
                                             {/* Immersive tasting notes text */}
-                                            <p className="font-paragraph text-sm text-foreground/80 leading-relaxed italic font-light">
+                                            <p className="font-paragraph text-xs text-foreground/80 leading-relaxed italic font-light">
                                                 "{blend.tastingNotes || 'A harmonious blend of ancient botanicals crafted for your evening sanctuary.'}"
                                             </p>
                                             
