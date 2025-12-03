@@ -25,27 +25,7 @@ export interface BrandPillars {
   callToActionUrl?: string;
 }
 
-/**
- * Collection ID: ingredientsshowcase
- * Interface for IngredientsShowcase
- */
-export interface IngredientsShowcase {
-  _id: string;
-  _createdDate?: Date;
-  _updatedDate?: Date;
-  /** @wixFieldType text */
-  ingredientName?: string;
-  /** @wixFieldType image */
-  macroImage?: string;
-  /** @wixFieldType text */
-  imageAltText?: string;
-  /** @wixFieldType text */
-  botanicalName?: string;
-  /** @wixFieldType text */
-  shortDescription?: string;
-  /** @wixFieldType text */
-  originCountry?: string;
-}
+
 /**
  * Collection ID: customertestimonials
  * Interface for CustomerTestimonials
@@ -212,24 +192,4 @@ export interface WellnessBenefits {
   displayOrder?: number;
   /** @wixFieldType boolean */
   isActive?: boolean;
-}
-
-/**
- * Collection ID: wellnessbenefits
- * Interface for WellnessBenefits
- */
-export interface WellnessBenefits {
-  _id: string;
-  _createdDate?: Date;
-  _updatedDate?: Date;
-  /** @wixFieldType text */
-  benefitName?: string;
-  /** @wixFieldType text */
-  description?: string;
-  /** @wixFieldType image */
-  cardImage?: string;
-  /** @wixFieldType text */
-  callToActionLabel?: string;
-  /** @wixFieldType url */
-  callToActionLink?: string;
 }

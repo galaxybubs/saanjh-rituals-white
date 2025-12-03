@@ -3,7 +3,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { BaseCrudService } from '@/integrations';
-import { BrandPillars, RitualTeaBlends, IngredientsShowcase, Ingredients, EveningRitualSteps, WellnessBenefits, CustomerTestimonials, SustainabilityOriginPoints } from '@/entities';
+import { BrandPillars, RitualTeaBlends, Ingredients, EveningRitualSteps, WellnessBenefits, CustomerTestimonials, SustainabilityOriginPoints } from '@/entities';
 import { Image } from '@/components/ui/image';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Star, Leaf, Droplets, Sun, Moon, Wind } from 'lucide-react';
@@ -238,34 +238,52 @@ export default function HomePage() {
                             </h2>
                         </AnimatedElement>
                         
-                        <div className="space-y-6">
+                        <div className="space-y-8">
                             <AnimatedElement delay={200}>
                                 <p className="text-xl text-foreground/85 leading-relaxed font-light">
-                                    Saanjh—the golden hour—is more than a moment in time. It is a ritual of return, a gentle invitation to ground yourself in ancestral wisdom. We believe in the power of slowing down, of savoring the transition from day to night.
+                                    Saanjh—the golden hour—is more than a moment in time. It is a ritual of return, a gentle invitation to ground yourself in ancestral wisdom. We believe in the power of slowing down, of savoring the transition from day to night. This is the moment when the veil between the material and spiritual grows thin, when your body and mind are most receptive to healing.
                                 </p>
                             </AnimatedElement>
                             <AnimatedElement delay={400}>
                                 <p className="text-xl text-foreground/85 leading-relaxed font-light">
-                                    Each blend is a meditation, crafted from rare Ayurvedic botanicals sourced from the foothills of the Himalayas. We honor the slow, the sensory, the sacred. This is wellness as it was meant to be—rooted in heritage, elevated by intention.
+                                    Each blend is a meditation in a cup, crafted from rare Ayurvedic botanicals sourced from the misty foothills of the Himalayas and the sacred gardens of India. We honor the slow, the sensory, the sacred. This is wellness as it was meant to be—rooted in heritage, elevated by intention, and infused with the wisdom of generations.
                                 </p>
                             </AnimatedElement>
                             <AnimatedElement delay={600}>
-                                <p className="text-lg text-foreground/70 leading-relaxed italic border-l-4 border-primary pl-6 py-4">
-                                    "Saanjh is not just about what you drink—it's about who you become when you pause, breathe, and reconnect with the ancient wisdom flowing through your veins."
-                                </p>
+                                <div className="bg-gradient-to-r from-primary/5 to-secondary/5 border-l-4 border-primary rounded-lg p-8 backdrop-blur-sm">
+                                    <p className="text-lg text-foreground/80 leading-relaxed italic font-light">
+                                        "Saanjh is not just about what you drink—it's about who you become when you pause, breathe, and reconnect with the ancient wisdom flowing through your veins. It's about reclaiming your right to stillness in a world that demands constant motion."
+                                    </p>
+                                </div>
+                            </AnimatedElement>
+                            <AnimatedElement delay={800}>
+                                <div className="grid grid-cols-2 gap-6 pt-4">
+                                    <div className="bg-white rounded-2xl p-6 border border-primary/10 hover:border-primary/30 transition-all">
+                                        <p className="text-sm uppercase tracking-widest text-primary font-bold mb-2">Ritual Duration</p>
+                                        <p className="text-2xl font-heading text-foreground">15-20 min</p>
+                                    </div>
+                                    <div className="bg-white rounded-2xl p-6 border border-primary/10 hover:border-primary/30 transition-all">
+                                        <p className="text-sm uppercase tracking-widest text-primary font-bold mb-2">Best Time</p>
+                                        <p className="text-2xl font-heading text-foreground">Sunset Hour</p>
+                                    </div>
+                                </div>
                             </AnimatedElement>
                         </div>
                     </div>
 
                     {/* Right: Decorative Visual */}
                     <AnimatedElement delay={300} className="h-full">
-                        <div className="relative h-[500px] lg:h-[600px] rounded-3xl overflow-hidden shadow-2xl">
+                        <div className="relative h-[500px] lg:h-[700px] rounded-3xl overflow-hidden shadow-2xl group">
                             <Image
                                 src="https://static.wixstatic.com/media/b117e9_10da8a33b781414794e9cc8274613802~mv2.png?originWidth=1664&originHeight=896"
                                 alt="Golden hour ritual with chai steam and macro spices"
-                                className="w-full h-full object-cover"
+                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/20" />
+                            <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/80 to-transparent">
+                                <p className="text-warm-cream text-sm uppercase tracking-widest font-bold mb-2">The Golden Hour</p>
+                                <p className="text-warm-cream/90 text-lg leading-relaxed">Where ancient wisdom meets modern wellness, one mindful sip at a time.</p>
+                            </div>
                         </div>
                     </AnimatedElement>
                 </div>
