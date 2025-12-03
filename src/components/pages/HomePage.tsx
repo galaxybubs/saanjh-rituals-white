@@ -410,46 +410,46 @@ export default function HomePage() {
                             </div>
                             
                             {/* Product Info Section */}
-                            <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-warm-cream via-white to-soft-rose-beige/30 border border-primary/15 p-4 transition-all duration-700 group-hover:border-primary/30 group-hover:shadow-lg group-hover:shadow-primary/10 backdrop-blur-sm min-h-[120px] flex flex-col">
-                            {/* Decorative top accent gradient */}
-                            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-60" />
-                            
-                            {/* Subtle background pattern accent */}
-                            <div className="absolute inset-0 opacity-30 pointer-events-none">
-                                <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-full blur-2xl" />
-                            </div>
-                            
-                            <div className="relative z-10 flex flex-col h-full">
-                                {/* Premium label with accent */}
-                                <div className="flex items-center gap-2 mb-3">
-                                    <div className="w-0.5 h-2 bg-gradient-to-b from-primary to-secondary rounded-full" />
-                                    <span className="text-xs font-bold tracking-widest uppercase text-primary/80">Flavor Profile</span>
-                                </div>
-                                
-                                {/* Immersive tasting notes text */}
-                                <p className="font-paragraph text-xs text-foreground/80 leading-relaxed italic font-light flex-grow">
-                                    "{blend.tastingNotes || 'A harmonious blend of ancient botanicals crafted for your evening sanctuary.'}"
-                                </p>
-                                
-                                {/* Bottom accent line */}
-                                <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
-                            </div>
-                        </div>
-                        <div className="flex justify-between items-start border-t border-foreground/10 pt-3 mb-4">
-                                    <div>
-                                        <h3 className="font-heading text-xl font-medium text-foreground mb-1 group-hover:text-primary transition-colors duration-300">
-                                            {blend.blendName}
-                                        </h3>
-                                        <p className="font-paragraph text-xs text-foreground/60 max-w-xs leading-relaxed">
-                                            {blend.keyBenefits}
-                                        </p>
+                            <div className="flex justify-between items-start border-t border-foreground/10 pt-3 mb-4">
+                                        <div>
+                                            <h3 className="font-heading text-xl font-medium text-foreground mb-1 group-hover:text-primary transition-colors duration-300">
+                                                {blend.blendName}
+                                            </h3>
+                                            <p className="font-paragraph text-xs text-foreground/60 max-w-xs leading-relaxed">
+                                                {blend.keyBenefits}
+                                            </p>
+                                        </div>
+                                        <span className="font-paragraph text-base font-medium text-foreground whitespace-nowrap ml-2">
+                                            ${blend.price?.toFixed(2)}
+                                        </span>
                                     </div>
-                                    <span className="font-paragraph text-base font-medium text-foreground whitespace-nowrap ml-2">
-                                        ${blend.price?.toFixed(2)}
-                                    </span>
-                                </div>
 
-                            {/* Premium Flavor Profile Card - Immersive & Aesthetic */}
+                            <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-warm-cream via-white to-soft-rose-beige/30 border border-primary/15 p-4 transition-all duration-700 group-hover:border-primary/30 group-hover:shadow-lg group-hover:shadow-primary/10 backdrop-blur-sm min-h-[120px] flex flex-col">
+                        {/* Decorative top accent gradient */}
+                        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-60" />
+                        
+                        {/* Subtle background pattern accent */}
+                        <div className="absolute inset-0 opacity-30 pointer-events-none">
+                            <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-full blur-2xl" />
+                        </div>
+                        
+                        <div className="relative z-10 flex flex-col h-full">
+                            {/* Premium label with accent */}
+                            <div className="flex items-center gap-2 mb-3">
+                                <div className="w-0.5 h-2 bg-gradient-to-b from-primary to-secondary rounded-full" />
+                                <span className="text-xs font-bold tracking-widest uppercase text-primary/80">Flavor Profile</span>
+                            </div>
+                            
+                            {/* Immersive tasting notes text */}
+                            <p className="font-paragraph text-xs text-foreground/80 leading-relaxed italic font-light flex-grow">
+                                "{blend.tastingNotes || 'A harmonious blend of ancient botanicals crafted for your evening sanctuary.'}"
+                            </p>
+                            
+                            {/* Bottom accent line */}
+                            <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+                        </div>
+                    </div>
+                        {/* Premium Flavor Profile Card - Immersive & Aesthetic */}
                             </Link>
                       </AnimatedElement>
                     );
