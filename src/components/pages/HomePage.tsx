@@ -7,6 +7,7 @@ import { BrandPillars, RitualTeaBlends, Ingredients, EveningRitualSteps, Wellnes
 import { Image } from '@/components/ui/image';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Star, Leaf, Droplets, Sun, Moon, Wind } from 'lucide-react';
+import { tastingNotesLibrary } from '@/data/tasting-notes';
 
 // --- UTILITY COMPONENTS ---
 
@@ -364,8 +365,8 @@ export default function HomePage() {
                                         </div>
                                     </div>
                                     {/* Badge */}
-                                    <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full shadow-[inset_0px_0px_4px_0px_#bfbfbf]">
-                                        <span className="text-xs font-bold tracking-wider uppercase text-foreground/80">{blend.healingUSP || 'Ritual Blend'}</span>
+                                    <div className="absolute top-6 left-6 bg-gradient-to-r from-white/95 to-white/85 backdrop-blur-md px-4 py-2 rounded-full border border-white/40 shadow-lg shadow-black/10 hover:shadow-xl hover:shadow-black/20 transition-all duration-300 group-hover:scale-105">
+                                        <span className="text-xs font-bold tracking-widest uppercase text-foreground/85 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">{blend.healingUSP || 'Ritual Blend'}</span>
                                     </div>
                                 </div>
                                 
