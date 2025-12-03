@@ -420,34 +420,22 @@ export default function HomePage() {
                                     </span>
                                 </div>
 
-                                {/* Tasting Notes - Stunning Premium Card */}
-                                <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary/15 via-secondary/8 to-primary/12 border-2 border-primary/40 p-8 transition-all duration-700 group-hover:border-primary/70 group-hover:shadow-2xl group-hover:shadow-primary/30 group-hover:-translate-y-3">
-                                    {/* Animated gradient background orbs */}
-                                    <div className="absolute -top-32 -right-32 w-64 h-64 bg-gradient-to-br from-primary/25 to-transparent rounded-full blur-3xl pointer-events-none opacity-40 group-hover:opacity-80 transition-opacity duration-700" />
-                                    <div className="absolute -bottom-32 -left-32 w-64 h-64 bg-gradient-to-tr from-secondary/20 to-transparent rounded-full blur-3xl pointer-events-none opacity-40 group-hover:opacity-70 transition-opacity duration-700" />
-                                    
-                                    {/* Subtle top accent line */}
-                                    <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                {/* Tasting Notes - Luxury Minimalist Card */}
+                                <div className="relative overflow-hidden rounded-2xl bg-white border border-primary/15 p-7 transition-all duration-500 group-hover:border-primary/30 group-hover:shadow-lg group-hover:shadow-primary/10">
+                                    {/* Subtle top accent line - always visible */}
+                                    <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/25 to-transparent" />
                                     
                                     <div className="relative z-10">
-                                        {/* Label with animated accent */}
-                                        <div className="flex items-center gap-3 mb-6">
-                                            <div className="relative h-6 w-1 rounded-full overflow-hidden bg-gradient-to-b from-primary via-secondary to-primary shadow-lg">
-                                                <div className="absolute inset-0 bg-gradient-to-b from-white/30 to-transparent animate-pulse" />
-                                            </div>
-                                            <span className="text-xs font-black uppercase tracking-[0.2em] bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent drop-shadow-sm">Tasting Notes</span>
+                                        {/* Clean label */}
+                                        <div className="flex items-center gap-2.5 mb-5">
+                                            <div className="w-0.5 h-3 bg-primary/60" />
+                                            <span className="text-xs font-semibold tracking-widest uppercase text-foreground/70">Tasting Notes</span>
                                         </div>
                                         
-                                        {/* Tasting notes text */}
-                                        <p className="font-paragraph text-lg text-foreground/85 leading-relaxed italic font-light">
+                                        {/* Tasting notes text - elegant and simple */}
+                                        <p className="font-paragraph text-base text-foreground/80 leading-relaxed italic font-light">
                                             "{blend.tastingNotes || 'A harmonious blend of ancient botanicals crafted for your evening sanctuary.'}"
                                         </p>
-                                        
-                                        {/* Bottom accent decoration */}
-                                        <div className="mt-6 pt-6 border-t border-primary/20 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                            <div className="w-1 h-1 rounded-full bg-primary" />
-                                            <span className="text-xs text-primary/60 uppercase tracking-widest font-semibold">Premium Blend</span>
-                                        </div>
                                     </div>
                                 </div>
                             </Link>
