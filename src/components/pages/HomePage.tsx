@@ -369,7 +369,7 @@ export default function HomePage() {
                                     </div>
                                 </div>
                                 
-                                <div className="flex justify-between items-start border-t border-foreground/10 pt-6">
+                                <div className="flex justify-between items-start border-t border-foreground/10 pt-6 mb-8">
                                     <div>
                                         <h3 className="font-heading text-3xl font-medium text-foreground mb-2 group-hover:text-primary transition-colors">
                                             {blend.blendName}
@@ -382,6 +382,25 @@ export default function HomePage() {
                                         ${blend.price?.toFixed(2)}
                                     </span>
                                 </div>
+
+                                {/* Tasting Notes Card */}
+                                {blend.tastingNotes && (
+                                    <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary/8 via-secondary/5 to-primary/5 border border-primary/20 p-6 group-hover:border-primary/40 transition-all duration-500 group-hover:shadow-lg group-hover:shadow-primary/10">
+                                        {/* Decorative background elements */}
+                                        <div className="absolute -top-20 -right-20 w-40 h-40 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
+                                        <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-secondary/10 rounded-full blur-3xl pointer-events-none" />
+                                        
+                                        <div className="relative z-10">
+                                            <div className="flex items-center gap-2 mb-4">
+                                                <div className="w-1 h-6 bg-gradient-to-b from-primary to-secondary rounded-full" />
+                                                <span className="text-xs font-bold uppercase tracking-widest text-primary">Tasting Notes</span>
+                                            </div>
+                                            <p className="font-paragraph text-base text-foreground/80 leading-relaxed italic">
+                                                {blend.tastingNotes}
+                                            </p>
+                                        </div>
+                                    </div>
+                                )}
                             </Link>
                         </AnimatedElement>
                     ))}

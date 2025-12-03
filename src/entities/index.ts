@@ -142,6 +142,8 @@ export interface RitualTeaBlends {
   healingUSP?: string;
   /** @wixFieldType text */
   productSKU?: string;
+  /** @wixFieldType text */
+  tastingNotes?: string;
 }
 
 
