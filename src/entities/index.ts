@@ -123,6 +123,8 @@ export interface RitualTeaBlends {
   _createdDate?: Date;
   _updatedDate?: Date;
   /** @wixFieldType text */
+  tastingNotes?: string;
+  /** @wixFieldType text */
   blendName?: string;
   /** @wixFieldType number */
   price?: number;
@@ -142,8 +144,6 @@ export interface RitualTeaBlends {
   healingUSP?: string;
   /** @wixFieldType text */
   productSKU?: string;
-  /** @wixFieldType text */
-  tastingNotes?: string;
 }
 
 
