@@ -380,21 +380,31 @@ export default function HomePage() {
                                         />
                                     )}
                                     {/* Immersive Overlay - Elegant Gradient */}
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                                     
                                     {/* Integrated Tasting Notes - Appears on Hover */}
-                                    <div className="absolute inset-0 flex flex-col justify-end p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-                                        <div className="space-y-4">
-                                            {/* Tasting Notes Label */}
-                                            <div className="flex items-center gap-2.5">
-                                                <div className="w-0.5 h-4 bg-primary/90" />
-                                                <span className="text-xs font-semibold tracking-widest uppercase text-primary/95">Tasting Notes</span>
+                                    <div className="absolute inset-0 flex flex-col justify-between p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                                        {/* Top: Healing USP Badge */}
+                                        <div className="flex justify-end">
+                                            <div className="px-4 py-2 rounded-lg bg-white/10 backdrop-blur-md border border-white/20 hover:border-primary/40 transition-colors">
+                                                <span className="text-xs font-semibold tracking-widest uppercase text-warm-cream/90">{blend.healingUSP || 'Ritual Blend'}</span>
                                             </div>
+                                        </div>
+                                        
+                                        {/* Bottom: Tasting Notes - The Star */}
+                                        <div className="space-y-5">
+                                            {/* Elegant Divider Line */}
+                                            <div className="w-12 h-0.5 bg-gradient-to-r from-primary to-transparent" />
                                             
-                                            {/* Tasting Notes Text */}
-                                            <p className="font-paragraph text-sm md:text-base text-warm-cream/95 leading-relaxed italic font-light max-w-sm">
-                                                "{blend.tastingNotes || 'A harmonious blend of ancient botanicals crafted for your evening sanctuary.'}"
-                                            </p>
+                                            {/* Label */}
+                                            <div>
+                                                <span className="text-xs font-bold tracking-[0.15em] uppercase text-primary/90 block mb-3">Tasting Notes</span>
+                                                
+                                                {/* The Quote - Premium Typography */}
+                                                <p className="font-paragraph text-lg md:text-xl text-warm-cream leading-relaxed italic font-light">
+                                                    "{blend.tastingNotes || 'A harmonious blend of ancient botanicals crafted for your evening sanctuary.'}"
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                     {/* Premium Floating Badge - Modern Luxury */}
