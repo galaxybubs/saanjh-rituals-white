@@ -224,49 +224,47 @@ export default function HomePage() {
 
           </section>
           {/* --- SAANJH RITUAL CALLOUT: PREMIUM SPLIT LAYOUT --- */}
-          <section className="md:px-12 bg-warm-cream relative overflow-hidden py-0 px-12 pt-[120px] pr-12 pb-[60px] pl-12">
+          <section className="md:px-12 bg-warm-cream relative overflow-hidden py-0 px-12 pt-[100px] pr-12 pb-[45px] pl-12">
             <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
-            <div className="absolute -top-40 -right-40 w-96 h-96 bg-primary/8 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-secondary/8 rounded-full blur-3xl pointer-events-none" />
             
-            <div className="max-w-[120rem] mx-auto relative z-10">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-40 items-center">
+            <div className="max-w-7xl mx-auto">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-center">
                     {/* Left: Text Content */}
                     <div>
                         <AnimatedElement>
-                            <span className="text-primary font-bold tracking-widest uppercase text-sm mb-8 block">The Saanjh Ritual</span>
-                            <h2 className="font-heading text-6xl md:text-8xl text-foreground leading-tight mb-12">
+                            <span className="text-primary font-bold tracking-widest uppercase text-sm mb-6 block">The Saanjh Ritual</span>
+                            <h2 className="font-heading text-5xl md:text-7xl text-foreground leading-tight mb-10">
                                 "In the quiet glow of evening, when the world softens and the sky turns gold, there exists a sacred pause."
                             </h2>
                         </AnimatedElement>
                         
-                        <div className="space-y-10">
+                        <div className="space-y-8">
                             <AnimatedElement delay={200}>
-                                <p className="text-2xl text-foreground/85 leading-relaxed font-light">
+                                <p className="text-xl text-foreground/85 leading-relaxed font-light">
                                     Saanjh—the golden hour—is more than a moment in time. It is a ritual of return, a gentle invitation to ground yourself in ancestral wisdom. We believe in the power of slowing down, of savoring the transition from day to night. This is the moment when the veil between the material and spiritual grows thin, when your body and mind are most receptive to healing.
                                 </p>
                             </AnimatedElement>
                             <AnimatedElement delay={400}>
-                                <p className="text-2xl text-foreground/85 leading-relaxed font-light">
+                                <p className="text-xl text-foreground/85 leading-relaxed font-light">
                                     Each blend is a meditation in a cup, crafted from rare Ayurvedic botanicals sourced from the misty foothills of the Himalayas and the sacred gardens of India. We honor the slow, the sensory, the sacred. This is wellness as it was meant to be—rooted in heritage, elevated by intention, and infused with the wisdom of generations.
                                 </p>
                             </AnimatedElement>
                             <AnimatedElement delay={600}>
-                                <div className="bg-gradient-to-r from-primary/8 to-secondary/8 border-l-4 border-primary rounded-2xl p-10 backdrop-blur-sm shadow-lg">
-                                    <p className="text-xl text-foreground/80 leading-relaxed italic font-light">
+                                <div className="bg-gradient-to-r from-primary/5 to-secondary/5 border-l-4 border-primary rounded-lg p-8 backdrop-blur-sm">
+                                    <p className="text-lg text-foreground/80 leading-relaxed italic font-light">
                                         "Saanjh is not just about what you drink—it's about who you become when you pause, breathe, and reconnect with the ancient wisdom flowing through your veins. It's about reclaiming your right to stillness in a world that demands constant motion."
                                     </p>
                                 </div>
                             </AnimatedElement>
                             <AnimatedElement delay={800}>
-                                <div className="grid grid-cols-2 gap-8 pt-6">
-                                    <div className="bg-white rounded-3xl p-8 border border-primary/15 hover:border-primary/40 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                                        <p className="text-xs uppercase tracking-widest text-primary font-bold mb-3">Ritual Duration</p>
-                                        <p className="text-3xl font-heading text-foreground">15-20 min</p>
+                                <div className="grid grid-cols-2 gap-6 pt-4">
+                                    <div className="bg-white rounded-2xl p-6 border border-primary/10 hover:border-primary/30 transition-all">
+                                        <p className="text-sm uppercase tracking-widest text-primary font-bold mb-2">Ritual Duration</p>
+                                        <p className="text-2xl font-heading text-foreground">15-20 min</p>
                                     </div>
-                                    <div className="bg-white rounded-3xl p-8 border border-primary/15 hover:border-primary/40 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                                        <p className="text-xs uppercase tracking-widest text-primary font-bold mb-3">Best Time</p>
-                                        <p className="text-3xl font-heading text-foreground">Sunset Hour</p>
+                                    <div className="bg-white rounded-2xl p-6 border border-primary/10 hover:border-primary/30 transition-all">
+                                        <p className="text-sm uppercase tracking-widest text-primary font-bold mb-2">Best Time</p>
+                                        <p className="text-2xl font-heading text-foreground">Sunset Hour</p>
                                     </div>
                                 </div>
                             </AnimatedElement>
@@ -275,16 +273,16 @@ export default function HomePage() {
 
                     {/* Right: Decorative Visual */}
                     <AnimatedElement delay={300} className="h-full">
-                        <div className="relative h-[600px] lg:h-[850px] rounded-3xl overflow-hidden shadow-2xl group">
+                        <div className="relative h-[500px] lg:h-[700px] rounded-3xl overflow-hidden shadow-2xl group">
                             <Image
                                 src="https://static.wixstatic.com/media/b117e9_10da8a33b781414794e9cc8274613802~mv2.png?originWidth=1664&originHeight=896"
                                 alt="Golden hour ritual with chai steam and macro spices"
                                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/10" />
-                            <div className="absolute bottom-0 left-0 right-0 p-10 bg-gradient-to-t from-black/90 via-black/60 to-transparent">
-                                <p className="text-warm-cream text-xs uppercase tracking-widest font-bold mb-3">The Golden Hour</p>
-                                <p className="text-warm-cream/95 text-xl leading-relaxed font-light">Where ancient wisdom meets modern wellness, one mindful sip at a time.</p>
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/20" />
+                            <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/80 to-transparent">
+                                <p className="text-warm-cream text-sm uppercase tracking-widest font-bold mb-2">The Golden Hour</p>
+                                <p className="text-warm-cream/90 text-lg leading-relaxed">Where ancient wisdom meets modern wellness, one mindful sip at a time.</p>
                             </div>
                         </div>
                     </AnimatedElement>
@@ -578,29 +576,27 @@ export default function HomePage() {
             </div>
           </section>
           {/* --- WELLNESS BENEFITS: PREMIUM GRID CALLOUT --- */}
-          <section className="py-48 px-6 md:px-12 bg-warm-cream relative overflow-hidden">
+          <section className="py-40 px-6 md:px-12 bg-warm-cream relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
-            <div className="absolute -top-40 -left-40 w-96 h-96 bg-primary/8 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-secondary/8 rounded-full blur-3xl pointer-events-none" />
             
-            <div className="max-w-[120rem] mx-auto relative z-10">
-                <div className="text-center mb-32">
+            <div className="max-w-7xl mx-auto">
+                <div className="text-center mb-24">
                     <AnimatedElement>
-                        <span className="text-primary font-bold tracking-widest uppercase text-sm mb-8 block">Holistic Wellness</span>
-                        <h2 className="font-heading text-6xl md:text-8xl text-foreground mb-10">
+                        <span className="text-primary font-bold tracking-widest uppercase text-sm mb-6 block">Holistic Wellness</span>
+                        <h2 className="font-heading text-5xl md:text-7xl text-foreground mb-8">
                             Holistic Harmony
                         </h2>
-                        <p className="text-2xl text-foreground/70 max-w-4xl mx-auto leading-relaxed">
+                        <p className="text-xl text-foreground/70 max-w-3xl mx-auto leading-relaxed">
                             Beyond taste, our blends are crafted for feeling. Each botanical is selected for its targeted benefits—nourishing mind, body, and spirit with the wisdom of ancient Ayurvedic traditions.
                         </p>
                     </AnimatedElement>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {wellnessBenefits.map((benefit, index) => (
                         <AnimatedElement key={benefit._id} delay={index * 100}>
-                            <div className="group h-full p-10 rounded-3xl border border-primary/20 bg-white hover:border-primary transition-all duration-500 hover:shadow-2xl hover:shadow-primary/15 flex flex-col items-center text-center hover:-translate-y-3">
-                                <div className="mb-10 w-full h-72 overflow-hidden rounded-2xl bg-warm-cream">
+                            <div className="group h-full p-8 rounded-3xl border border-primary/20 bg-white hover:border-primary transition-all duration-500 hover:shadow-xl hover:shadow-primary/10 flex flex-col items-center text-center hover:-translate-y-2">
+                                <div className="mb-8 w-full h-56 overflow-hidden rounded-2xl bg-warm-cream">
                                     {benefit.benefitImage && (
                                         <Image
                                             src={benefit.benefitImage}
@@ -609,10 +605,10 @@ export default function HomePage() {
                                         />
                                     )}
                                 </div>
-                                <h3 className="font-heading text-4xl font-semibold text-foreground mb-6 group-hover:text-primary transition-colors">
+                                <h3 className="font-heading text-3xl font-semibold text-foreground mb-4 group-hover:text-primary transition-colors">
                                     {benefit.benefitTitle}
                                 </h3>
-                                <p className="text-foreground/70 leading-relaxed text-xl">
+                                <p className="text-foreground/70 leading-relaxed text-lg">
                                     {benefit.benefitDescription}
                                 </p>
                             </div>
@@ -713,39 +709,37 @@ export default function HomePage() {
             </div>
           </section>
           {/* --- SUSTAINABILITY: PREMIUM CALLOUT --- */}
-          <section className="py-48 px-6 md:px-12 bg-[#EBE5DE] relative overflow-hidden">
+          <section className="py-40 px-6 md:px-12 bg-[#EBE5DE] relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
-            <div className="absolute -top-40 -right-40 w-96 h-96 bg-primary/8 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-secondary/8 rounded-full blur-3xl pointer-events-none" />
             
-            <div className="max-w-[120rem] mx-auto relative z-10">
-                <div className="text-center mb-32">
+            <div className="max-w-7xl mx-auto">
+                <div className="text-center mb-24">
                     <AnimatedElement>
-                        <span className="text-primary font-bold tracking-widest uppercase text-sm mb-8 block">Our Commitment</span>
-                        <h2 className="font-heading text-6xl md:text-8xl text-foreground mb-10">
+                        <span className="text-primary font-bold tracking-widest uppercase text-sm mb-6 block">Our Commitment</span>
+                        <h2 className="font-heading text-5xl md:text-7xl text-foreground mb-8">
                             Conscious Origin
                         </h2>
-                        <p className="text-2xl text-foreground/70 max-w-4xl mx-auto leading-relaxed">
+                        <p className="text-xl text-foreground/70 max-w-3xl mx-auto leading-relaxed">
                             We honor the earth that nourishes us. Every botanical is sourced with intention, every partnership built on respect. Sustainability isn't a feature—it's the foundation of everything we create.
                         </p>
                     </AnimatedElement>
-                    <AnimatedElement delay={200} className="mt-16">
-                        <div className="flex justify-center gap-12">
-                            <div className="flex flex-col items-center gap-4">
-                                <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center">
-                                    <Leaf className="w-10 h-10 text-dark-herbal-green" />
+                    <AnimatedElement delay={200} className="mt-12">
+                        <div className="flex justify-center gap-8">
+                            <div className="flex flex-col items-center gap-3">
+                                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                                    <Leaf className="w-8 h-8 text-dark-herbal-green" />
                                 </div>
                                 <span className="text-sm font-bold uppercase tracking-widest text-foreground/70">Ethically Sourced</span>
                             </div>
-                            <div className="flex flex-col items-center gap-4">
-                                <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center">
-                                    <Sun className="w-10 h-10 text-primary" />
+                            <div className="flex flex-col items-center gap-3">
+                                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                                    <Sun className="w-8 h-8 text-primary" />
                                 </div>
                                 <span className="text-sm font-bold uppercase tracking-widest text-foreground/70">Regenerative</span>
                             </div>
-                            <div className="flex flex-col items-center gap-4">
-                                <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center">
-                                    <Droplets className="w-10 h-10 text-blue-900/60" />
+                            <div className="flex flex-col items-center gap-3">
+                                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                                    <Droplets className="w-8 h-8 text-blue-900/60" />
                                 </div>
                                 <span className="text-sm font-bold uppercase tracking-widest text-foreground/70">Pure & Clean</span>
                             </div>
@@ -754,26 +748,26 @@ export default function HomePage() {
                 </div>
 
                 {sustainabilityPoints.map((point) => (
-                    <div key={point._id} className="grid grid-cols-1 md:grid-cols-3 gap-14">
+                    <div key={point._id} className="grid grid-cols-1 md:grid-cols-3 gap-12">
                         {[
                             { title: point.point1Title, desc: point.point1Description, img: point.point1Image },
                             { title: point.point2Title, desc: point.point2Description, img: point.point2Image },
                             { title: point.point3Title, desc: point.point3Description, img: point.point3Image }
                         ].map((item, idx) => (
                             <AnimatedElement key={idx} delay={idx * 150} className="group">
-                                <div className="mb-10 overflow-hidden rounded-3xl aspect-[4/3]">
+                                <div className="mb-8 overflow-hidden rounded-3xl aspect-[4/3]">
                                     {item.img && (
                                         <Image
                                             src={item.img}
                                             alt={item.title || ''}
-                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0"
                                         />
                                     )}
                                 </div>
-                                <h3 className="font-heading text-4xl font-semibold text-foreground mb-6">
+                                <h3 className="font-heading text-3xl font-semibold text-foreground mb-4">
                                     {item.title}
                                 </h3>
-                                <p className="text-foreground/70 leading-relaxed text-xl">
+                                <p className="text-foreground/70 leading-relaxed text-lg">
                                     {item.desc}
                                 </p>
                             </AnimatedElement>
