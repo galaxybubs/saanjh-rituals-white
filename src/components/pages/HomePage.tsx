@@ -379,10 +379,22 @@ export default function HomePage() {
                                             className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
                                         />
                                     )}
-                                    {/* Hover Overlay */}
-                                    <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
-                                        <div className="bg-white/90 backdrop-blur-md px-8 py-4 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                                            <span className="text-foreground font-medium tracking-widest uppercase text-sm">View Ritual</span>
+                                    {/* Immersive Overlay - Elegant Gradient */}
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                                    
+                                    {/* Integrated Tasting Notes - Appears on Hover */}
+                                    <div className="absolute inset-0 flex flex-col justify-end p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                                        <div className="space-y-4">
+                                            {/* Tasting Notes Label */}
+                                            <div className="flex items-center gap-2.5">
+                                                <div className="w-0.5 h-4 bg-primary/90" />
+                                                <span className="text-xs font-semibold tracking-widest uppercase text-primary/95">Tasting Notes</span>
+                                            </div>
+                                            
+                                            {/* Tasting Notes Text */}
+                                            <p className="font-paragraph text-sm md:text-base text-warm-cream/95 leading-relaxed italic font-light max-w-sm">
+                                                "{blend.tastingNotes || 'A harmonious blend of ancient botanicals crafted for your evening sanctuary.'}"
+                                            </p>
                                         </div>
                                     </div>
                                     {/* Premium Floating Badge - Modern Luxury */}
