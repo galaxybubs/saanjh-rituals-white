@@ -124,7 +124,7 @@ export default function HomePage() {
   const [testimonials, setTestimonials] = useState<CustomerTestimonials[]>([]);
   const [sustainabilityPoints, setSustainabilityPoints] = useState<SustainabilityOriginPoints[]>([]);
 
-  // --- PRESERVE: ORIGINAL FETCHING LOGIC ---
+  // --- PRESERVE: ORIGINAL FETCHING LOGIC WITH AUTO-TASTING NOTES ---
   useEffect(() => {
     const fetchData = async () => {
       const [pillarsData, blendsData, ingredientsData, stepsData, benefitsData, testimonialsData, sustainabilityData] = await Promise.all([
@@ -137,8 +137,29 @@ export default function HomePage() {
         BaseCrudService.getAll<SustainabilityOriginPoints>('sustainabilityoriginpoints'),
       ]);
 
+      // Auto-assign tasting notes to ALL products that don't have them
+      const tastingNotesArray = Object.values(tastingNotesLibrary);
+      const blendsWithNotes = await Promise.all(
+        blendsData.items.map(async (blend, index) => {
+          if (!blend.tastingNotes || blend.tastingNotes.trim() === '') {
+            const assignedNote = tastingNotesArray[index % tastingNotesArray.length];
+            try {
+              await BaseCrudService.update<RitualTeaBlends>('ritualteablends', {
+                _id: blend._id,
+                tastingNotes: assignedNote,
+              });
+              return { ...blend, tastingNotes: assignedNote };
+            } catch (error) {
+              console.error(`Failed to update tasting notes for ${blend.blendName}:`, error);
+              return { ...blend, tastingNotes: assignedNote };
+            }
+          }
+          return blend;
+        })
+      );
+
       setBrandPillars(pillarsData.items.sort((a, b) => (a.displayOrder || 0) - (b.displayOrder || 0)));
-      setTeaBlends(blendsData.items.slice(0, 4));
+      setTeaBlends(blendsWithNotes.slice(0, 4));
       setIngredients(ingredientsData.items.slice(0, 6));
       setRitualSteps(stepsData.items.sort((a, b) => (a.stepNumber || 0) - (b.stepNumber || 0)));
       setWellnessBenefits(benefitsData.items.filter(b => b.isActive).sort((a, b) => (a.displayOrder || 0) - (b.displayOrder || 0)).slice(0, 6));
@@ -364,9 +385,13 @@ export default function HomePage() {
                                             <span className="text-foreground font-medium tracking-widest uppercase text-sm">View Ritual</span>
                                         </div>
                                     </div>
-                                    {/* Badge */}
-                                    <div className="absolute top-6 left-6 bg-gradient-to-r from-white/95 to-white/85 backdrop-blur-md px-4 py-2 rounded-full border border-white/40 shadow-lg shadow-black/10 hover:shadow-xl hover:shadow-black/20 transition-all duration-300 group-hover:scale-105">
-                                        <span className="text-xs font-bold tracking-widest uppercase text-foreground/85 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">{blend.healingUSP || 'Ritual Blend'}</span>
+                                    {/* Premium Badge - Stunning Visual Update */}
+                                    <div className="absolute top-6 left-6 group/badge">
+                                        <div className="absolute inset-0 bg-gradient-to-r from-primary/40 to-secondary/40 rounded-full blur-xl opacity-0 group-hover/badge:opacity-100 transition-opacity duration-500" />
+                                        <div className="relative bg-gradient-to-br from-white via-white/98 to-white/95 backdrop-blur-xl px-5 py-2.5 rounded-full border-2 border-white/60 shadow-2xl shadow-black/20 hover:shadow-2xl hover:shadow-primary/30 transition-all duration-300 group-hover/badge:scale-110 group-hover/badge:border-primary/40">
+                                            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/5 via-transparent to-secondary/5 opacity-0 group-hover/badge:opacity-100 transition-opacity duration-300" />
+                                            <span className="relative text-xs font-black tracking-[0.15em] uppercase bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent drop-shadow-sm">{blend.healingUSP || 'Ritual Blend'}</span>
+                                        </div>
                                     </div>
                                 </div>
                                 
@@ -384,24 +409,22 @@ export default function HomePage() {
                                     </span>
                                 </div>
 
-                                {/* Tasting Notes Card */}
-                                {blend.tastingNotes && (
-                                    <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary/8 via-secondary/5 to-primary/5 border border-primary/20 p-6 group-hover:border-primary/40 transition-all duration-500 group-hover:shadow-lg group-hover:shadow-primary/10">
-                                        {/* Decorative background elements */}
-                                        <div className="absolute -top-20 -right-20 w-40 h-40 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
-                                        <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-secondary/10 rounded-full blur-3xl pointer-events-none" />
-                                        
-                                        <div className="relative z-10">
-                                            <div className="flex items-center gap-2 mb-4">
-                                                <div className="w-1 h-6 bg-gradient-to-b from-primary to-secondary rounded-full" />
-                                                <span className="text-xs font-bold uppercase tracking-widest text-primary">Tasting Notes</span>
-                                            </div>
-                                            <p className="font-paragraph text-base text-foreground/80 leading-relaxed italic">
-                                                {blend.tastingNotes}
-                                            </p>
+                                {/* Tasting Notes Card - Always Visible & Stunning */}
+                                <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary/12 via-secondary/8 to-primary/10 border-2 border-primary/30 p-8 group-hover:border-primary/60 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-primary/20 group-hover:-translate-y-2">
+                                    {/* Premium Decorative Background */}
+                                    <div className="absolute -top-24 -right-24 w-56 h-56 bg-primary/15 rounded-full blur-3xl pointer-events-none opacity-60 group-hover:opacity-100 transition-opacity duration-500" />
+                                    <div className="absolute -bottom-24 -left-24 w-56 h-56 bg-secondary/15 rounded-full blur-3xl pointer-events-none opacity-60 group-hover:opacity-100 transition-opacity duration-500" />
+                                    
+                                    <div className="relative z-10">
+                                        <div className="flex items-center gap-3 mb-5">
+                                            <div className="w-1.5 h-8 bg-gradient-to-b from-primary via-secondary to-primary rounded-full shadow-lg" />
+                                            <span className="text-xs font-black uppercase tracking-[0.2em] bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Tasting Notes</span>
                                         </div>
+                                        <p className="font-paragraph text-lg text-foreground/85 leading-relaxed italic font-light">
+                                            "{blend.tastingNotes || 'A harmonious blend of ancient botanicals crafted for your evening sanctuary.'}"
+                                        </p>
                                     </div>
-                                )}
+                                </div>
                             </Link>
                         </AnimatedElement>
                     ))}
