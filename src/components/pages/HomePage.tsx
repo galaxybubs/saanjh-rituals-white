@@ -367,12 +367,12 @@ export default function HomePage() {
                     </AnimatedElement>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16 lg:gap-y-24">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12 lg:gap-y-16">
                     {teaBlends.map((blend, index) => (
-                        <AnimatedElement key={blend._id} delay={index * 100} className={`group ${index % 2 !== 0 ? 'md:translate-y-24' : ''}`}>
+                        <AnimatedElement key={blend._id} delay={index * 100} className="group">
                             <Link to="/store" className="block">
-                                {/* Premium Product Card Container */}
-                                <div className="relative aspect-[4/5] overflow-hidden rounded-lg mb-8 bg-[#F0EBE5] shadow-lg">
+                                {/* Premium Product Card Container - Optimized Size */}
+                                <div className="relative aspect-[3/4] overflow-hidden rounded-lg mb-6 bg-[#F0EBE5] shadow-lg">
                                     {/* Main Product Image */}
                                     {blend.mainImage && (
                                         <Image
@@ -407,22 +407,22 @@ export default function HomePage() {
                                 </div>
                                 
                                 {/* Product Info Section */}
-                                <div className="flex justify-between items-start border-t border-foreground/10 pt-6 mb-8">
+                                <div className="flex justify-between items-start border-t border-foreground/10 pt-4 mb-5">
                                     <div>
-                                        <h3 className="font-heading text-3xl font-medium text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
+                                        <h3 className="font-heading text-2xl font-medium text-foreground mb-1 group-hover:text-primary transition-colors duration-300">
                                             {blend.blendName}
                                         </h3>
-                                        <p className="font-paragraph text-sm text-foreground/60 max-w-xs leading-relaxed">
+                                        <p className="font-paragraph text-xs text-foreground/60 max-w-xs leading-relaxed">
                                             {blend.keyBenefits}
                                         </p>
                                     </div>
-                                    <span className="font-paragraph text-xl font-medium text-foreground whitespace-nowrap ml-4">
+                                    <span className="font-paragraph text-lg font-medium text-foreground whitespace-nowrap ml-3">
                                         ${blend.price?.toFixed(2)}
                                     </span>
                                 </div>
 
                                 {/* Premium Flavor Profile Card - Immersive & Aesthetic */}
-                                <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-warm-cream via-white to-soft-rose-beige/30 border border-primary/15 p-8 transition-all duration-700 group-hover:border-primary/30 group-hover:shadow-lg group-hover:shadow-primary/10 backdrop-blur-sm">
+                                <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-warm-cream via-white to-soft-rose-beige/30 border border-primary/15 p-5 transition-all duration-700 group-hover:border-primary/30 group-hover:shadow-lg group-hover:shadow-primary/10 backdrop-blur-sm">
                                     {/* Decorative top accent gradient */}
                                     <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-60" />
                                     
@@ -433,13 +433,13 @@ export default function HomePage() {
                                     
                                     <div className="relative z-10">
                                         {/* Premium label with accent */}
-                                        <div className="flex items-center gap-3 mb-6">
+                                        <div className="flex items-center gap-3 mb-4">
                                             <div className="w-1 h-3 bg-gradient-to-b from-primary to-secondary rounded-full" />
                                             <span className="text-xs font-bold tracking-widest uppercase text-primary/80 letter-spacing-wide">Flavor Profile</span>
                                         </div>
                                         
                                         {/* Immersive tasting notes text */}
-                                        <p className="font-paragraph text-base text-foreground/80 leading-relaxed italic font-light">
+                                        <p className="font-paragraph text-sm text-foreground/80 leading-relaxed italic font-light">
                                             "{blend.tastingNotes || 'A harmonious blend of ancient botanicals crafted for your evening sanctuary.'}"
                                         </p>
                                         
