@@ -410,20 +410,6 @@ export default function HomePage() {
                             </div>
                             
                             {/* Product Info Section */}
-                            <div className="flex justify-between items-start border-t border-foreground/10 pt-3 mb-4">
-                                    <div>
-                                        <h3 className="font-heading text-xl font-medium text-foreground mb-1 group-hover:text-primary transition-colors duration-300">
-                                            {blend.blendName}
-                                        </h3>
-                                        <p className="font-paragraph text-xs text-foreground/60 max-w-xs leading-relaxed">
-                                            {blend.keyBenefits}
-                                        </p>
-                                    </div>
-                                    <span className="font-paragraph text-base font-medium text-foreground whitespace-nowrap ml-2">
-                                        ${blend.price?.toFixed(2)}
-                                    </span>
-                                </div>
-
                             <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-warm-cream via-white to-soft-rose-beige/30 border border-primary/15 p-4 transition-all duration-700 group-hover:border-primary/30 group-hover:shadow-lg group-hover:shadow-primary/10 backdrop-blur-sm min-h-[120px] flex flex-col">
                             {/* Decorative top accent gradient */}
                             <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-60" />
@@ -449,7 +435,21 @@ export default function HomePage() {
                                 <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
                             </div>
                         </div>
-                        {/* Premium Flavor Profile Card - Immersive & Aesthetic */}
+                        <div className="flex justify-between items-start border-t border-foreground/10 pt-3 mb-4">
+                                    <div>
+                                        <h3 className="font-heading text-xl font-medium text-foreground mb-1 group-hover:text-primary transition-colors duration-300">
+                                            {blend.blendName}
+                                        </h3>
+                                        <p className="font-paragraph text-xs text-foreground/60 max-w-xs leading-relaxed">
+                                            {blend.keyBenefits}
+                                        </p>
+                                    </div>
+                                    <span className="font-paragraph text-base font-medium text-foreground whitespace-nowrap ml-2">
+                                        ${blend.price?.toFixed(2)}
+                                    </span>
+                                </div>
+
+                            {/* Premium Flavor Profile Card - Immersive & Aesthetic */}
                             </Link>
                       </AnimatedElement>
                     );
