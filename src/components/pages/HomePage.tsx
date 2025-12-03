@@ -421,22 +421,30 @@ export default function HomePage() {
                                     </span>
                                 </div>
 
-                                {/* Subtle Tasting Notes Card - Desktop Reference */}
-                                <div className="relative overflow-hidden rounded-xl bg-white border border-primary/10 p-6 transition-all duration-500 group-hover:border-primary/20 group-hover:shadow-md group-hover:shadow-primary/5">
-                                    {/* Top accent line */}
-                                    <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+                                {/* Premium Flavor Profile Card - Immersive & Aesthetic */}
+                                <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-warm-cream via-white to-soft-rose-beige/30 border border-primary/15 p-8 transition-all duration-700 group-hover:border-primary/30 group-hover:shadow-lg group-hover:shadow-primary/10 backdrop-blur-sm">
+                                    {/* Decorative top accent gradient */}
+                                    <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-60" />
+                                    
+                                    {/* Subtle background pattern accent */}
+                                    <div className="absolute inset-0 opacity-30 pointer-events-none">
+                                        <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl" />
+                                    </div>
                                     
                                     <div className="relative z-10">
-                                        {/* Minimalist label */}
-                                        <div className="flex items-center gap-2 mb-4">
-                                            <div className="w-0.5 h-2.5 bg-primary/50" />
-                                            <span className="text-xs font-semibold tracking-widest uppercase text-foreground/60">Flavor Profile</span>
+                                        {/* Premium label with accent */}
+                                        <div className="flex items-center gap-3 mb-6">
+                                            <div className="w-1 h-3 bg-gradient-to-b from-primary to-secondary rounded-full" />
+                                            <span className="text-xs font-bold tracking-widest uppercase text-primary/80 letter-spacing-wide">Flavor Profile</span>
                                         </div>
                                         
-                                        {/* Tasting notes text */}
-                                        <p className="font-paragraph text-sm text-foreground/75 leading-relaxed italic font-light">
+                                        {/* Immersive tasting notes text */}
+                                        <p className="font-paragraph text-base text-foreground/80 leading-relaxed italic font-light">
                                             "{blend.tastingNotes || 'A harmonious blend of ancient botanicals crafted for your evening sanctuary.'}"
                                         </p>
+                                        
+                                        {/* Bottom accent line */}
+                                        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
                                     </div>
                                 </div>
                             </Link>
