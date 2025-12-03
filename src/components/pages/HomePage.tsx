@@ -398,10 +398,10 @@ export default function HomePage() {
                                             "{blend.tastingNotes || 'A harmonious blend of ancient botanicals crafted for your evening sanctuary.'}"
                                         </p>
                                         
-                                        {/* Healing USP - Subtle Badge */}
-                                        <div className="flex items-center gap-2">
-                                            <div className="w-1 h-1 rounded-full bg-primary/60" />
-                                            <span className="text-xs font-semibold tracking-widest uppercase text-warm-cream/70">{blend.healingUSP || 'Ritual Blend'}</span>
+                                        {/* Healing USP - Premium Accent Badge */}
+                                        <div className="mt-4 pt-4 border-t border-primary/30 flex items-center gap-3">
+                                            <div className="w-2 h-2 rounded-full bg-gradient-to-r from-primary to-secondary" />
+                                            <span className="text-sm font-bold tracking-widest uppercase text-primary">{blend.healingUSP || 'Ritual Blend'}</span>
                                         </div>
                                     </div>
                                 </div>
