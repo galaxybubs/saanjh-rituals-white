@@ -385,10 +385,23 @@ export default function HomePage() {
                                             <span className="text-foreground font-medium tracking-widest uppercase text-sm">View Ritual</span>
                                         </div>
                                     </div>
-                                    {/* Elegant Premium Badge */}
-                                    <div className="absolute top-8 left-8 group/badge">
-                                        <div className="relative bg-white/85 backdrop-blur-md px-4 py-2 rounded-lg border border-white/40 shadow-lg shadow-black/8 transition-all duration-500 group-hover/badge:bg-white/95 group-hover/badge:border-primary/30 group-hover/badge:shadow-xl group-hover/badge:shadow-primary/15">
-                                            <span className="text-xs font-semibold tracking-widest uppercase text-foreground/70 group-hover/badge:text-primary transition-colors duration-300">{blend.healingUSP || 'Ritual Blend'}</span>
+                                    {/* Premium Floating Badge - Modern Luxury */}
+                                    <div className="absolute top-6 right-6 group/badge">
+                                        <div className="relative">
+                                            {/* Animated glow backdrop */}
+                                            <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-secondary/30 rounded-full blur-2xl opacity-0 group-hover/badge:opacity-100 transition-opacity duration-700 scale-150" />
+                                            
+                                            {/* Main badge container */}
+                                            <div className="relative px-6 py-3 rounded-full bg-gradient-to-br from-white/95 to-white/80 backdrop-blur-xl border border-white/60 shadow-2xl shadow-black/15 transition-all duration-500 group-hover/badge:shadow-2xl group-hover/badge:shadow-primary/25 group-hover/badge:scale-110 group-hover/badge:border-primary/40">
+                                                {/* Subtle inner gradient */}
+                                                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 opacity-0 group-hover/badge:opacity-100 transition-opacity duration-500" />
+                                                
+                                                {/* Badge content */}
+                                                <div className="relative flex items-center gap-2">
+                                                    <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-primary to-secondary animate-pulse" />
+                                                    <span className="text-xs font-bold tracking-[0.15em] uppercase bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent drop-shadow-sm\">{blend.healingUSP || 'Ritual Blend'}</span>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -407,16 +420,34 @@ export default function HomePage() {
                                     </span>
                                 </div>
 
-                                {/* Elegant Tasting Notes - Minimal & Premium */}
-                                <div className="relative overflow-hidden rounded-2xl bg-white/40 backdrop-blur-sm border border-primary/15 p-6 transition-all duration-500 group-hover:bg-white/50 group-hover:border-primary/25 group-hover:shadow-lg group-hover:shadow-primary/8">
+                                {/* Tasting Notes - Stunning Premium Card */}
+                                <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary/15 via-secondary/8 to-primary/12 border-2 border-primary/40 p-8 transition-all duration-700 group-hover:border-primary/70 group-hover:shadow-2xl group-hover:shadow-primary/30 group-hover:-translate-y-3">
+                                    {/* Animated gradient background orbs */}
+                                    <div className="absolute -top-32 -right-32 w-64 h-64 bg-gradient-to-br from-primary/25 to-transparent rounded-full blur-3xl pointer-events-none opacity-40 group-hover:opacity-80 transition-opacity duration-700" />
+                                    <div className="absolute -bottom-32 -left-32 w-64 h-64 bg-gradient-to-tr from-secondary/20 to-transparent rounded-full blur-3xl pointer-events-none opacity-40 group-hover:opacity-70 transition-opacity duration-700" />
+                                    
+                                    {/* Subtle top accent line */}
+                                    <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                    
                                     <div className="relative z-10">
-                                        <div className="flex items-center gap-2 mb-4">
-                                            <div className="w-0.5 h-5 bg-primary/40" />
-                                            <span className="text-xs font-semibold uppercase tracking-widest text-primary/60">Tasting Notes</span>
+                                        {/* Label with animated accent */}
+                                        <div className="flex items-center gap-3 mb-6">
+                                            <div className="relative h-6 w-1 rounded-full overflow-hidden bg-gradient-to-b from-primary via-secondary to-primary shadow-lg">
+                                                <div className="absolute inset-0 bg-gradient-to-b from-white/30 to-transparent animate-pulse" />
+                                            </div>
+                                            <span className="text-xs font-black uppercase tracking-[0.2em] bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent drop-shadow-sm">Tasting Notes</span>
                                         </div>
-                                        <p className="font-paragraph text-base text-foreground/75 leading-relaxed italic font-light">
-                                            {blend.tastingNotes || 'A harmonious blend of ancient botanicals crafted for your evening sanctuary.'}
+                                        
+                                        {/* Tasting notes text */}
+                                        <p className="font-paragraph text-lg text-foreground/85 leading-relaxed italic font-light">
+                                            "{blend.tastingNotes || 'A harmonious blend of ancient botanicals crafted for your evening sanctuary.'}"
                                         </p>
+                                        
+                                        {/* Bottom accent decoration */}
+                                        <div className="mt-6 pt-6 border-t border-primary/20 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                            <div className="w-1 h-1 rounded-full bg-primary" />
+                                            <span className="text-xs text-primary/60 uppercase tracking-widest font-semibold">Premium Blend</span>
+                                        </div>
                                     </div>
                                 </div>
                             </Link>
@@ -495,13 +526,7 @@ export default function HomePage() {
                   <Reveal>
                     <div className="flex items-center gap-4 mb-8">
                       <div className="h-[1px] w-12 bg-primary" />
-                                        <span className="text-primary uppercase tracking-widest text-sm">Ethical Sourcing</span>
-/*
-                                          <AnimatedElement>
-                            <h2 className="font-heading text-5xl md:text-7xl text-foreground mb-4">
-                                Ethical Sourcing
-                            </h2>
-                        </AnimatedElement>*/
+                      <span className="text-primary uppercase tracking-widest text-sm">Ethical Sourcing</span>
                     </div>
                     <h2 className="font-heading text-5xl md:text-7xl text-warm-cream mb-10">
                       From the Misty Highlands to Your Cup
