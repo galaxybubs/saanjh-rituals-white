@@ -385,12 +385,10 @@ export default function HomePage() {
                                             <span className="text-foreground font-medium tracking-widest uppercase text-sm">View Ritual</span>
                                         </div>
                                     </div>
-                                    {/* Premium Badge - Stunning Visual Update */}
-                                    <div className="absolute top-6 left-6 group/badge">
-                                        <div className="absolute inset-0 bg-gradient-to-r from-primary/40 to-secondary/40 rounded-full blur-xl opacity-0 group-hover/badge:opacity-100 transition-opacity duration-500" />
-                                        <div className="relative bg-gradient-to-br from-white via-white/98 to-white/95 backdrop-blur-xl px-5 py-2.5 rounded-full border-2 border-white/60 shadow-2xl shadow-black/20 hover:shadow-2xl hover:shadow-primary/30 transition-all duration-300 group-hover/badge:scale-110 group-hover/badge:border-primary/40">
-                                            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/5 via-transparent to-secondary/5 opacity-0 group-hover/badge:opacity-100 transition-opacity duration-300" />
-                                            <span className="relative text-xs font-black tracking-[0.15em] uppercase bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent drop-shadow-sm">{blend.healingUSP || 'Ritual Blend'}</span>
+                                    {/* Elegant Premium Badge */}
+                                    <div className="absolute top-8 left-8 group/badge">
+                                        <div className="relative bg-white/85 backdrop-blur-md px-4 py-2 rounded-lg border border-white/40 shadow-lg shadow-black/8 transition-all duration-500 group-hover/badge:bg-white/95 group-hover/badge:border-primary/30 group-hover/badge:shadow-xl group-hover/badge:shadow-primary/15">
+                                            <span className="text-xs font-semibold tracking-widest uppercase text-foreground/70 group-hover/badge:text-primary transition-colors duration-300">{blend.healingUSP || 'Ritual Blend'}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -409,19 +407,15 @@ export default function HomePage() {
                                     </span>
                                 </div>
 
-                                {/* Tasting Notes Card - Always Visible & Stunning */}
-                                <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary/12 via-secondary/8 to-primary/10 border-2 border-primary/30 p-8 group-hover:border-primary/60 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-primary/20 group-hover:-translate-y-2">
-                                    {/* Premium Decorative Background */}
-                                    <div className="absolute -top-24 -right-24 w-56 h-56 bg-primary/15 rounded-full blur-3xl pointer-events-none opacity-60 group-hover:opacity-100 transition-opacity duration-500" />
-                                    <div className="absolute -bottom-24 -left-24 w-56 h-56 bg-secondary/15 rounded-full blur-3xl pointer-events-none opacity-60 group-hover:opacity-100 transition-opacity duration-500" />
-                                    
+                                {/* Elegant Tasting Notes - Minimal & Premium */}
+                                <div className="relative overflow-hidden rounded-2xl bg-white/40 backdrop-blur-sm border border-primary/15 p-6 transition-all duration-500 group-hover:bg-white/50 group-hover:border-primary/25 group-hover:shadow-lg group-hover:shadow-primary/8">
                                     <div className="relative z-10">
-                                        <div className="flex items-center gap-3 mb-5">
-                                            <div className="w-1.5 h-8 bg-gradient-to-b from-primary via-secondary to-primary rounded-full shadow-lg" />
-                                            <span className="text-xs font-black uppercase tracking-[0.2em] bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Tasting Notes</span>
+                                        <div className="flex items-center gap-2 mb-4">
+                                            <div className="w-0.5 h-5 bg-primary/40" />
+                                            <span className="text-xs font-semibold uppercase tracking-widest text-primary/60">Tasting Notes</span>
                                         </div>
-                                        <p className="font-paragraph text-lg text-foreground/85 leading-relaxed italic font-light">
-                                            "{blend.tastingNotes || 'A harmonious blend of ancient botanicals crafted for your evening sanctuary.'}"
+                                        <p className="font-paragraph text-base text-foreground/75 leading-relaxed italic font-light">
+                                            {blend.tastingNotes || 'A harmonious blend of ancient botanicals crafted for your evening sanctuary.'}
                                         </p>
                                     </div>
                                 </div>
