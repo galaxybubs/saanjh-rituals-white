@@ -8,6 +8,7 @@ import { Image } from '@/components/ui/image';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Star, Leaf, Droplets, Sun, Moon, Wind } from 'lucide-react';
 import { tastingNotesLibrary } from '@/data/tasting-notes';
+import { getOverlayDescriptor } from '@/data/overlay-descriptors';
 
 // --- UTILITY COMPONENTS ---
 
@@ -367,89 +368,92 @@ export default function HomePage() {
                     </AnimatedElement>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12 lg:gap-y-16">
-                    {teaBlends.map((blend, index) => (
-                        <AnimatedElement key={blend._id} delay={index * 100} className="group">
-                            <Link to="/store" className="block">
-                                {/* Premium Product Card Container - Optimized Size */}
-                                <div className="relative aspect-[3/4] overflow-hidden rounded-lg mb-6 bg-[#F0EBE5] shadow-lg">
-                                    {/* Main Product Image */}
-                                    {blend.mainImage && (
-                                        <Image
-                                            src={blend.mainImage}
-                                            alt={blend.blendName || ''}
-                                            className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110"
-                                        />
-                                    )}
-                                    
-                                    {/* Deep Immersive Overlay - Luxurious Gradient */}
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-                                    
-                                    {/* Tasting Notes Hero Section - Appears on Hover */}
-                                    <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-                                        {/* Elegant Divider */}
-                                        <div className="mb-6 flex items-center gap-4">
-                                            <div className="h-px flex-1 bg-gradient-to-r from-primary via-primary/50 to-transparent" />
-                                            <span className="text-xs font-bold tracking-[0.2em] uppercase text-primary/80 whitespace-nowrap">Tasting Notes</span>
-                                        </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+                    {teaBlends.map((blend, index) => {
+                        const overlayDesc = getOverlayDescriptor(index);
+                        return (
+                            <AnimatedElement key={blend._id} delay={index * 100} className="group">
+                                <Link to="/store" className="block">
+                                    {/* Premium Product Card Container - True 3-Column Layout */}
+                                    <div className="relative aspect-[3/4] overflow-hidden rounded-lg mb-5 bg-[#F0EBE5] shadow-lg">
+                                        {/* Main Product Image */}
+                                        {blend.mainImage && (
+                                            <Image
+                                                src={blend.mainImage}
+                                                alt={blend.blendName || ''}
+                                                className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110"
+                                            />
+                                        )}
                                         
-                                        {/* Premium Tasting Notes Typography */}
-                                        <p className="font-paragraph text-lg md:text-xl text-warm-cream leading-relaxed italic font-light mb-6">
-                                            "{blend.tastingNotes || 'A harmonious blend of ancient botanicals crafted for your evening sanctuary.'}"
-                                        </p>
+                                        {/* Deep Immersive Overlay - Luxurious Gradient */}
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                                         
-                                        {/* Healing USP - Premium Accent Badge */}
-                                        <div className="mt-4 pt-4 border-t border-primary/30 flex items-center gap-3">
-                                            <div className="w-2 h-2 rounded-full bg-gradient-to-r from-primary to-secondary" />
-                                            <span className="text-sm font-bold tracking-widest uppercase text-primary">{blend.healingUSP || 'Ritual Blend'}</span>
+                                        {/* Unique Overlay Descriptor - Appears on Hover */}
+                                        <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                                            {/* Elegant Divider */}
+                                            <div className="mb-4 flex items-center gap-3">
+                                                <div className="h-px flex-1 bg-gradient-to-r from-primary via-primary/50 to-transparent" />
+                                                <span className="text-xs font-bold tracking-[0.2em] uppercase text-primary/80 whitespace-nowrap">{overlayDesc.keyword}</span>
+                                            </div>
+                                            
+                                            {/* Unique Overlay Descriptor - NOT Tasting Notes */}
+                                            <p className="font-paragraph text-base md:text-lg text-warm-cream leading-relaxed font-light">
+                                                {overlayDesc.descriptor}
+                                            </p>
+                                            
+                                            {/* Healing USP - Premium Accent Badge */}
+                                            <div className="mt-4 pt-4 border-t border-primary/30 flex items-center gap-3">
+                                                <div className="w-2 h-2 rounded-full bg-gradient-to-r from-primary to-secondary" />
+                                                <span className="text-xs font-bold tracking-widest uppercase text-primary">{blend.healingUSP || 'Ritual Blend'}</span>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                
-                                {/* Product Info Section */}
-                                <div className="flex justify-between items-start border-t border-foreground/10 pt-4 mb-5">
-                                    <div>
-                                        <h3 className="font-heading text-2xl font-medium text-foreground mb-1 group-hover:text-primary transition-colors duration-300">
-                                            {blend.blendName}
-                                        </h3>
-                                        <p className="font-paragraph text-xs text-foreground/60 max-w-xs leading-relaxed">
-                                            {blend.keyBenefits}
-                                        </p>
+                                    
+                                    {/* Product Info Section */}
+                                    <div className="flex justify-between items-start border-t border-foreground/10 pt-4 mb-5">
+                                        <div>
+                                            <h3 className="font-heading text-2xl font-medium text-foreground mb-1 group-hover:text-primary transition-colors duration-300">
+                                                {blend.blendName}
+                                            </h3>
+                                            <p className="font-paragraph text-xs text-foreground/60 max-w-xs leading-relaxed">
+                                                {blend.keyBenefits}
+                                            </p>
+                                        </div>
+                                        <span className="font-paragraph text-lg font-medium text-foreground whitespace-nowrap ml-3">
+                                            ${blend.price?.toFixed(2)}
+                                        </span>
                                     </div>
-                                    <span className="font-paragraph text-lg font-medium text-foreground whitespace-nowrap ml-3">
-                                        ${blend.price?.toFixed(2)}
-                                    </span>
-                                </div>
 
-                                {/* Premium Flavor Profile Card - Immersive & Aesthetic */}
-                                <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-warm-cream via-white to-soft-rose-beige/30 border border-primary/15 p-5 transition-all duration-700 group-hover:border-primary/30 group-hover:shadow-lg group-hover:shadow-primary/10 backdrop-blur-sm">
-                                    {/* Decorative top accent gradient */}
-                                    <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-60" />
-                                    
-                                    {/* Subtle background pattern accent */}
-                                    <div className="absolute inset-0 opacity-30 pointer-events-none">
-                                        <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl" />
-                                    </div>
-                                    
-                                    <div className="relative z-10">
-                                        {/* Premium label with accent */}
-                                        <div className="flex items-center gap-3 mb-4">
-                                            <div className="w-1 h-3 bg-gradient-to-b from-primary to-secondary rounded-full" />
-                                            <span className="text-xs font-bold tracking-widest uppercase text-primary/80 letter-spacing-wide">Flavor Profile</span>
+                                    {/* Premium Flavor Profile Card - Immersive & Aesthetic */}
+                                    <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-warm-cream via-white to-soft-rose-beige/30 border border-primary/15 p-5 transition-all duration-700 group-hover:border-primary/30 group-hover:shadow-lg group-hover:shadow-primary/10 backdrop-blur-sm">
+                                        {/* Decorative top accent gradient */}
+                                        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-60" />
+                                        
+                                        {/* Subtle background pattern accent */}
+                                        <div className="absolute inset-0 opacity-30 pointer-events-none">
+                                            <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl" />
                                         </div>
                                         
-                                        {/* Immersive tasting notes text */}
-                                        <p className="font-paragraph text-sm text-foreground/80 leading-relaxed italic font-light">
-                                            "{blend.tastingNotes || 'A harmonious blend of ancient botanicals crafted for your evening sanctuary.'}"
-                                        </p>
-                                        
-                                        {/* Bottom accent line */}
-                                        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+                                        <div className="relative z-10">
+                                            {/* Premium label with accent */}
+                                            <div className="flex items-center gap-3 mb-4">
+                                                <div className="w-1 h-3 bg-gradient-to-b from-primary to-secondary rounded-full" />
+                                                <span className="text-xs font-bold tracking-widest uppercase text-primary/80 letter-spacing-wide">Flavor Profile</span>
+                                            </div>
+                                            
+                                            {/* Immersive tasting notes text */}
+                                            <p className="font-paragraph text-sm text-foreground/80 leading-relaxed italic font-light">
+                                                "{blend.tastingNotes || 'A harmonious blend of ancient botanicals crafted for your evening sanctuary.'}"
+                                            </p>
+                                            
+                                            {/* Bottom accent line */}
+                                            <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+                                        </div>
                                     </div>
-                                </div>
-                            </Link>
-                        </AnimatedElement>
-                    ))}
+                                </Link>
+                            </AnimatedElement>
+                        );
+                    })}
                 </div>
                 
                 <div className="mt-24 text-center md:hidden">
