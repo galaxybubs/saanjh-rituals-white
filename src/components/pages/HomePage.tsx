@@ -522,21 +522,21 @@ export default function HomePage() {
               </div>
 
               {/* Right: Scrolling Content */}
-              <div className="flex items-center p-8 md:p-24 lg:p-32 relative z-10 bg-warm-cream">
+              <div className="flex items-center p-8 md:p-24 lg:p-32 relative z-10 bg-gradient-to-b from-warm-cream via-warm-cream to-soft-rose-beige/30">
                 <div className="max-w-xl">
                   <Reveal>
                     <div className="flex items-center gap-4 mb-8">
-                      <div className="h-[1px] w-12 bg-primary" />
-                      <span className="text-primary uppercase tracking-widest text-sm">Ethical Sourcing</span>
+                      <div className="h-[1px] w-12 bg-golden-tea-brown" />
+                      <span className="text-golden-tea-brown uppercase tracking-widest text-sm font-semibold">Ethical Sourcing</span>
                     </div>
-                    <h2 className="font-heading text-5xl md:text-7xl text-warm-cream mb-10">
+                    <h2 className="font-heading text-5xl md:text-7xl text-dark-herbal-green mb-10">
                       From the Misty Highlands to Your Cup
                     </h2>
-                    <div className="space-y-8 text-lg text-soft-rose-beige/90 leading-relaxed font-light">
-                      <p>
+                    <div className="space-y-8 text-lg leading-relaxed font-light">
+                      <p className="text-foreground/85">
                         Every blend begins its journey in the revered tea estates of India. We partner exclusively with small-holder farms that practice biodynamic agriculture, ensuring that every leaf is imbued with the purity of its origin.
                       </p>
-                      <p>
+                      <p className="text-foreground/80">
                         Hand-plucked at the break of dawn to preserve the morning dew, our leaves are processed using orthodox methods that have been perfected over centuries. This is not just tea; it is a preservation of heritage.
                       </p>
                     </div>
