@@ -541,27 +541,25 @@ export default function HomePage() {
                     </div>
                     
                     <div className="mt-12 grid grid-cols-2 gap-6">
-                      <div className="group relative bg-gradient-to-br from-golden-tea-brown/15 to-dark-herbal-green/10 rounded-2xl p-8 border-2 border-golden-tea-brown/60 hover:border-golden-tea-brown transition-all duration-300 hover:shadow-2xl hover:shadow-golden-tea-brown/40 hover:bg-gradient-to-br hover:from-golden-tea-brown/25 hover:to-dark-herbal-green/20">
-                        <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-golden-tea-brown/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      <div className="group relative bg-soft-rose-beige/50 rounded-2xl p-8 border border-golden-tea-brown/50 hover:border-golden-tea-brown/80 transition-all duration-300 hover:bg-soft-rose-beige/70">
                         <div className="relative z-10">
-                          <h4 className="font-heading text-5xl text-dark-herbal-green mb-3 font-bold group-hover:text-golden-tea-brown transition-colors duration-300\">100%</h4>
-                          <p className="text-base text-foreground/85 font-semibold group-hover:text-dark-herbal-green transition-colors duration-300\">Single Origin</p>
+                          <h4 className="font-heading text-5xl text-dark-herbal-green mb-3 font-bold group-hover:text-golden-tea-brown transition-colors duration-300">100%</h4>
+                          <p className="text-base text-foreground/80 font-semibold group-hover:text-golden-tea-brown transition-colors duration-300">Single Origin</p>
                         </div>
                       </div>
-                      <div className="group relative bg-gradient-to-br from-golden-tea-brown/15 to-dark-herbal-green/10 rounded-2xl p-8 border-2 border-golden-tea-brown/60 hover:border-golden-tea-brown transition-all duration-300 hover:shadow-2xl hover:shadow-golden-tea-brown/40 hover:bg-gradient-to-br hover:from-golden-tea-brown/25 hover:to-dark-herbal-green/20">
-                        <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-golden-tea-brown/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      <div className="group relative bg-soft-rose-beige/50 rounded-2xl p-8 border border-golden-tea-brown/50 hover:border-golden-tea-brown/80 transition-all duration-300 hover:bg-soft-rose-beige/70">
                         <div className="relative z-10">
-                          <h4 className="font-heading text-5xl text-dark-herbal-green mb-3 font-bold group-hover:text-golden-tea-brown transition-colors duration-300\">Zero</h4>
-                          <p className="text-base text-foreground/85 font-semibold group-hover:text-dark-herbal-green transition-colors duration-300\">Artificial Additives</p>
+                          <h4 className="font-heading text-5xl text-dark-herbal-green mb-3 font-bold group-hover:text-golden-tea-brown transition-colors duration-300">Zero</h4>
+                          <p className="text-base text-foreground/80 font-semibold group-hover:text-golden-tea-brown transition-colors duration-300">Artificial Additives</p>
                         </div>
                       </div>
                     </div>
 
                     <div className="mt-12">
                       <Link to="/about">
-                        <button className="group relative px-8 py-4 bg-gradient-to-r from-golden-tea-brown to-dark-herbal-green rounded-xl font-heading text-lg font-semibold text-warm-cream hover:from-dark-herbal-green hover:to-golden-tea-brown transition-all duration-300 hover:shadow-xl hover:shadow-golden-tea-brown/40 hover:scale-105 active:scale-95 flex items-center gap-3">
+                        <button className="group relative px-8 py-4 bg-golden-tea-brown hover:bg-golden-tea-brown/90 rounded-lg font-heading text-lg font-semibold text-warm-cream transition-all duration-300 flex items-center gap-3 border border-golden-tea-brown/80 hover:border-golden-tea-brown">
                           <span>Read the Full Story</span>
-                          <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+                          <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                         </button>
                       </Link>
                     </div>
