@@ -541,14 +541,14 @@ export default function HomePage() {
                       </p>
                     </div>
                     
-                    <div className="mt-12 grid grid-cols-2 gap-8 border-t border-primary/20 pt-8">
-                      <div>
-                        <h4 className="font-heading text-3xl text-primary mb-2">100%</h4>
-                        <p className="text-sm text-soft-rose-beige">Single Origin</p>
+                    <div className="mt-12 grid grid-cols-2 gap-6">
+                      <div className="bg-gradient-to-br from-dark-herbal-green/10 to-golden-tea-brown/10 rounded-lg p-6 border border-golden-tea-brown/30 hover:border-golden-tea-brown/60 transition-all duration-300 hover:shadow-lg hover:shadow-golden-tea-brown/20">
+                        <h4 className="font-heading text-3xl text-dark-herbal-green mb-3 font-bold">100%</h4>
+                        <p className="text-sm text-foreground/75 font-medium">Single Origin</p>
                       </div>
-                      <div>
-                        <h4 className="font-heading text-3xl text-primary mb-2">Zero</h4>
-                        <p className="text-sm text-soft-rose-beige">Artificial Additives</p>
+                      <div className="bg-gradient-to-br from-dark-herbal-green/10 to-golden-tea-brown/10 rounded-lg p-6 border border-golden-tea-brown/30 hover:border-golden-tea-brown/60 transition-all duration-300 hover:shadow-lg hover:shadow-golden-tea-brown/20">
+                        <h4 className="font-heading text-3xl text-dark-herbal-green mb-3 font-bold">Zero</h4>
+                        <p className="text-sm text-foreground/75 font-medium">Artificial Additives</p>
                       </div>
                     </div>
 
