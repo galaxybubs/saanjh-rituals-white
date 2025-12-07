@@ -24,9 +24,9 @@ export default function Header() {
           <Link to="/" className="flex items-center gap-3">
             <Image
               src="https://static.wixstatic.com/media/b117e9_7a6cf5be3dbb4573bd2fac8dd38c7ca8~mv2.png"
-              width={48}
-              height={48}
-              className="w-12 h-12 md:w-14 md:h-14 object-contain"
+              width={56}
+              height={56}
+              className="w-14 h-14 md:w-16 md:h-16 object-contain"
               originWidth={1024}
               originHeight={1024} />
             <div className="flex flex-col items-start gap-0 py-2" style={{ lineHeight: '0.8' }}>
