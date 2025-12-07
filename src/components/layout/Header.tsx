@@ -18,17 +18,18 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-40 bg-background/95 backdrop-blur-sm border-b border-primary/10">
-      <div className="max-w-[100rem] mx-auto px-4 py-4">
+      <div className="max-w-[100rem] mx-auto px-4 py-6">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
             <Image
               src="https://static.wixstatic.com/media/b117e9_7a6cf5be3dbb4573bd2fac8dd38c7ca8~mv2.png"
-              width={56}
-              height={56}
-              className="w-14 h-14 md:w-16 md:h-16 object-contain"
+              width={80}
+              height={80}
+              className="w-20 h-20 md:w-24 md:h-24 object-contain"
               originWidth={1024}
-              originHeight={1024} />
+              originHeight={1024}
+              alt="Saanjh Rituals Logo" />
             <div className="flex flex-col items-start gap-0 py-2" style={{ lineHeight: '0.8' }}>
 
             </div>
