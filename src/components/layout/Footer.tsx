@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import { Instagram, Facebook, Twitter, Mail } from 'lucide-react';
-import { Image } from '@/components/ui/image';
 
 export default function Footer() {
   return (
@@ -9,17 +8,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand Column */}
           <div>
-            <Link to="/" className="inline-block mb-6 flex items-center gap-3">
-              <Image
-                src="https://static.wixstatic.com/media/b117e9_7a6cf5be3dbb4573bd2fac8dd38c7ca8~mv2.png"
-                width={48}
-                height={48}
-                className="w-12 h-12 object-contain"
-                originWidth={1024}
-                originHeight={1024}
-                alt="Saanjh Rituals Logo"
-              />
-              <span className="font-heading text-2xl font-bold text-primary">
+            <Link to="/" className="inline-block mb-4">
+              <span className="font-heading text-4xl font-bold text-primary">
                 Saanjh
               </span>
             </Link>
