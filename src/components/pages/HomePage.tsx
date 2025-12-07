@@ -518,7 +518,7 @@ export default function HomePage() {
                   alt="Misty tea gardens in Darjeeling" 
                   className="w-full h-full"
                 />
-                <div className="absolute inset-0 bg-primary/10 mix-blend-overlay" />
+                <div className="absolute inset-0 mix-blend-overlay bg-[#C5A46D00]" />
               </div>
 
               {/* Right: Scrolling Content */}
