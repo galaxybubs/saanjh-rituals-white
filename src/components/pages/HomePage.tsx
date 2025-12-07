@@ -286,7 +286,7 @@ export default function HomePage() {
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/20" />
-                                <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/80 to-transparent">
+                                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-8">
                                     <p className="text-warm-cream text-sm uppercase tracking-widest font-bold mb-2">The Golden Hour</p>
                                     <p className="text-warm-cream/90 text-lg leading-relaxed">Where ancient wisdom meets modern wellness, one mindful sip at a time.</p>
                                 </div>
@@ -295,7 +295,7 @@ export default function HomePage() {
 
                         {/* Quote Container */}
                         <AnimatedElement delay={600} className="mt-0">
-                            <div className="bg-gradient-to-r from-primary/5 to-secondary/5 border-l-4 border-primary rounded-lg p-8 backdrop-blur-sm">
+                            <div className="bg-gradient-to-r from-primary/5 to-secondary/5 border-l-4 border-primary rounded-lg backdrop-blur-sm p-8">
                                 <p className="text-lg text-foreground/80 leading-relaxed italic font-light">
                                     "Saanjh is not just about what you drink—it's about who you become when you pause, breathe, and reconnect with the ancient wisdom flowing through your veins. It's about reclaiming your right to stillness in a world that demands constant motion."
                                 </p>
