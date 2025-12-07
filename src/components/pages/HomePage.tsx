@@ -509,7 +509,7 @@ export default function HomePage() {
             </div> 
           </section>
           {/* --- FARM TO CUP (Split Layout) --- */}
-          <section className="relative bg-black">
+          <section className="relative bg-warm-cream">
             <div className="grid lg:grid-cols-2 min-h-screen">
               {/* Left: Sticky Image */}
               <div className="relative h-[50vh] lg:h-screen lg:sticky lg:top-0 overflow-hidden">
@@ -521,7 +521,7 @@ export default function HomePage() {
               </div>
 
               {/* Right: Scrolling Content */}
-              <div className="flex items-center p-8 md:p-24 lg:p-32 relative z-10 bg-gradient-to-b from-warm-cream via-warm-cream to-soft-rose-beige/30">
+              <div className="flex items-center p-8 md:p-24 lg:p-32 relative z-10 bg-warm-cream">
                 <div className="max-w-xl">
                   <Reveal>
                     <div className="flex items-center gap-4 mb-8">
