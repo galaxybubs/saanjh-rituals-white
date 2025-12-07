@@ -415,7 +415,7 @@ export default function HomePage() {
                                                     <h3 className="font-heading text-xl font-medium text-foreground mb-1 group-hover:text-primary transition-colors duration-300">
                                                         {blend.blendName}
                                                     </h3>
-                                                    <p className="font-paragraph text-xs text-foreground/60 max-w-xs leading-relaxed">
+                                                    <p className="font-paragraph text-foreground/60 max-w-xs [writing-mode:horizontal-tb] text-xs">
                                                         {blend.keyBenefits}
                                                     </p>
                                                 </div>
