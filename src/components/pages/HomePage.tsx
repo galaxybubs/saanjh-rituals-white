@@ -251,7 +251,7 @@ export default function HomePage() {
             <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
             
             <div className="max-w-7xl mx-auto">
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16 items-start">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
                     {/* Left: Text Content */}
                     <div className="lg:col-span-1">
                         <AnimatedElement>
@@ -275,27 +275,9 @@ export default function HomePage() {
                         </div>
                     </div>
 
-                    {/* Right: Containers (Quote + Stats + Image) */}
-                    <div className="lg:col-span-2 space-y-6">
-                        <AnimatedElement delay={600}>
-                            <div className="bg-gradient-to-r from-primary/5 to-secondary/5 border-l-4 border-primary rounded-lg p-8 backdrop-blur-sm">
-                                <p className="text-lg text-foreground/80 leading-relaxed italic font-light">
-                                    "Saanjh is not just about what you drink—it's about who you become when you pause, breathe, and reconnect with the ancient wisdom flowing through your veins. It's about reclaiming your right to stillness in a world that demands constant motion."
-                                </p>
-                            </div>
-                        </AnimatedElement>
-                        <AnimatedElement delay={800}>
-                            <div className="grid grid-cols-2 gap-6">
-                                <div className="bg-white rounded-2xl p-6 border border-primary/10 hover:border-primary/30 transition-all">
-                                    <p className="text-sm uppercase tracking-widest text-primary font-bold mb-2">Ritual Duration</p>
-                                    <p className="text-2xl font-heading text-foreground">15-20 min</p>
-                                </div>
-                                <div className="bg-white rounded-2xl p-6 border border-primary/10 hover:border-primary/30 transition-all">
-                                    <p className="text-sm uppercase tracking-widest text-primary font-bold mb-2">Best Time</p>
-                                    <p className="text-2xl font-heading text-foreground">Sunset Hour</p>
-                                </div>
-                            </div>
-                        </AnimatedElement>
+                    {/* Right: Image + Containers Below */}
+                    <div className="lg:col-span-2 flex flex-col gap-6">
+                        {/* Image */}
                         <AnimatedElement delay={300} className="h-full">
                             <div className="relative h-[400px] lg:h-[500px] rounded-3xl overflow-hidden shadow-2xl group">
                                 <Image
@@ -307,6 +289,29 @@ export default function HomePage() {
                                 <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/80 to-transparent">
                                     <p className="text-warm-cream text-sm uppercase tracking-widest font-bold mb-2">The Golden Hour</p>
                                     <p className="text-warm-cream/90 text-lg leading-relaxed">Where ancient wisdom meets modern wellness, one mindful sip at a time.</p>
+                                </div>
+                            </div>
+                        </AnimatedElement>
+
+                        {/* Quote Container */}
+                        <AnimatedElement delay={600}>
+                            <div className="bg-gradient-to-r from-primary/5 to-secondary/5 border-l-4 border-primary rounded-lg p-8 backdrop-blur-sm">
+                                <p className="text-lg text-foreground/80 leading-relaxed italic font-light">
+                                    "Saanjh is not just about what you drink—it's about who you become when you pause, breathe, and reconnect with the ancient wisdom flowing through your veins. It's about reclaiming your right to stillness in a world that demands constant motion."
+                                </p>
+                            </div>
+                        </AnimatedElement>
+
+                        {/* Stats Containers */}
+                        <AnimatedElement delay={800}>
+                            <div className="grid grid-cols-2 gap-6">
+                                <div className="bg-white rounded-2xl p-6 border border-primary/10 hover:border-primary/30 transition-all">
+                                    <p className="text-sm uppercase tracking-widest text-primary font-bold mb-2">Ritual Duration</p>
+                                    <p className="text-2xl font-heading text-foreground">15-20 min</p>
+                                </div>
+                                <div className="bg-white rounded-2xl p-6 border border-primary/10 hover:border-primary/30 transition-all">
+                                    <p className="text-sm uppercase tracking-widest text-primary font-bold mb-2">Best Time</p>
+                                    <p className="text-2xl font-heading text-foreground">Sunset Hour</p>
                                 </div>
                             </div>
                         </AnimatedElement>
