@@ -23,27 +23,14 @@ export default function Header() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
             <Image
-              src="https://static.wixstatic.com/media/b117e9_f61ebcac14c94b9594edbff327184c7a~mv2.png"
+              src="https://static.wixstatic.com/media/b117e9_7a6cf5be3dbb4573bd2fac8dd38c7ca8~mv2.png"
               width={48}
               height={48}
               className="w-12 h-12 md:w-14 md:h-14 object-contain"
               originWidth={1024}
               originHeight={1024} />
             <div className="flex flex-col items-start gap-0 py-2" style={{ lineHeight: '0.8' }}>
-              <span className="font-heading text-2xl md:text-3xl font-bold text-[#A37A52]" style={{
-                letterSpacing: '0.04em',
-                fontWeight: '700',
-                lineHeight: '0.8'
-              }}>
-                Saanjh
-              </span>
-              <span className="font-heading text-xs md:text-sm font-light text-[#A37A52]" style={{
-                letterSpacing: '0.2em',
-                fontWeight: '300',
-                lineHeight: '0.8'
-              }}>
-                RITUALS
-              </span>
+
             </div>
           </Link>
 
