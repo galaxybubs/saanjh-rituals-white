@@ -518,7 +518,6 @@ export default function HomePage() {
                   alt="Misty tea gardens in Darjeeling" 
                   className="w-full h-full"
                 />
-                <div className="absolute inset-0 mix-blend-overlay bg-gradient-to-r from-golden-tea-brown/40 via-golden-tea-brown/25 to-transparent" />
               </div>
 
               {/* Right: Scrolling Content */}
@@ -542,28 +541,28 @@ export default function HomePage() {
                     </div>
                     
                     <div className="mt-12 grid grid-cols-2 gap-6">
-                      <div className="group relative bg-gradient-to-br from-golden-tea-brown/20 to-dark-herbal-green/15 rounded-xl p-8 border border-golden-tea-brown/40 hover:border-golden-tea-brown/80 transition-all duration-300 hover:shadow-xl hover:shadow-golden-tea-brown/30 hover:bg-gradient-to-br hover:from-golden-tea-brown/30 hover:to-dark-herbal-green/25">
-                        <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-golden-tea-brown/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      <div className="group relative bg-gradient-to-br from-golden-tea-brown/15 to-dark-herbal-green/10 rounded-2xl p-8 border-2 border-golden-tea-brown/60 hover:border-golden-tea-brown transition-all duration-300 hover:shadow-2xl hover:shadow-golden-tea-brown/40 hover:bg-gradient-to-br hover:from-golden-tea-brown/25 hover:to-dark-herbal-green/20">
+                        <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-golden-tea-brown/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                         <div className="relative z-10">
-                          <h4 className="font-heading text-4xl text-golden-tea-brown mb-3 font-bold group-hover:text-dark-herbal-green transition-colors duration-300">100%</h4>
-                          <p className="text-sm text-foreground/80 font-semibold group-hover:text-foreground transition-colors duration-300">Single Origin</p>
+                          <h4 className="font-heading text-5xl text-dark-herbal-green mb-3 font-bold group-hover:text-golden-tea-brown transition-colors duration-300\">100%</h4>
+                          <p className="text-base text-foreground/85 font-semibold group-hover:text-dark-herbal-green transition-colors duration-300\">Single Origin</p>
                         </div>
                       </div>
-                      <div className="group relative bg-gradient-to-br from-golden-tea-brown/20 to-dark-herbal-green/15 rounded-xl p-8 border border-golden-tea-brown/40 hover:border-golden-tea-brown/80 transition-all duration-300 hover:shadow-xl hover:shadow-golden-tea-brown/30 hover:bg-gradient-to-br hover:from-golden-tea-brown/30 hover:to-dark-herbal-green/25">
-                        <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-golden-tea-brown/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      <div className="group relative bg-gradient-to-br from-golden-tea-brown/15 to-dark-herbal-green/10 rounded-2xl p-8 border-2 border-golden-tea-brown/60 hover:border-golden-tea-brown transition-all duration-300 hover:shadow-2xl hover:shadow-golden-tea-brown/40 hover:bg-gradient-to-br hover:from-golden-tea-brown/25 hover:to-dark-herbal-green/20">
+                        <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-golden-tea-brown/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                         <div className="relative z-10">
-                          <h4 className="font-heading text-4xl text-golden-tea-brown mb-3 font-bold group-hover:text-dark-herbal-green transition-colors duration-300">Zero</h4>
-                          <p className="text-sm text-foreground/80 font-semibold group-hover:text-foreground transition-colors duration-300">Artificial Additives</p>
+                          <h4 className="font-heading text-5xl text-dark-herbal-green mb-3 font-bold group-hover:text-golden-tea-brown transition-colors duration-300\">Zero</h4>
+                          <p className="text-base text-foreground/85 font-semibold group-hover:text-dark-herbal-green transition-colors duration-300\">Artificial Additives</p>
                         </div>
                       </div>
                     </div>
 
                     <div className="mt-12">
                       <Link to="/about">
-                        <span className="inline-flex items-center gap-3 text-golden-tea-brown hover:text-dark-herbal-green transition-colors cursor-pointer group">
-                          <span className="border-b border-golden-tea-brown pb-1 group-hover:border-dark-herbal-green transition-colors">Read the Full Story</span>
-                          <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
-                        </span>
+                        <button className="group relative px-8 py-4 bg-gradient-to-r from-golden-tea-brown to-dark-herbal-green rounded-xl font-heading text-lg font-semibold text-warm-cream hover:from-dark-herbal-green hover:to-golden-tea-brown transition-all duration-300 hover:shadow-xl hover:shadow-golden-tea-brown/40 hover:scale-105 active:scale-95 flex items-center gap-3">
+                          <span>Read the Full Story</span>
+                          <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+                        </button>
                       </Link>
                     </div>
                   </Reveal>
