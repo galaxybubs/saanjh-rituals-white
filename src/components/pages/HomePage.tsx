@@ -276,9 +276,9 @@ export default function HomePage() {
                     </div>
 
                     {/* Right: Image + Containers Below */}
-                    <div className="lg:col-span-2 flex flex-col gap-3">
+                    <div className="lg:col-span-2 flex flex-col gap-2">
                         {/* Image */}
-                        <AnimatedElement delay={300} className="h-full">
+                        <AnimatedElement delay={300}>
                             <div className="relative h-[400px] lg:h-[500px] rounded-3xl overflow-hidden shadow-2xl group">
                                 <Image
                                     src="https://static.wixstatic.com/media/b117e9_10da8a33b781414794e9cc8274613802~mv2.png?originWidth=1664&originHeight=896"
@@ -303,7 +303,7 @@ export default function HomePage() {
                         </AnimatedElement>
 
                         {/* Stats Containers */}
-                        <AnimatedElement delay={800}>
+                        <AnimatedElement delay={800} className="mt-0">
                             <div className="grid grid-cols-2 gap-6">
                                 <div className="bg-white rounded-2xl p-6 border border-primary/10 hover:border-primary/30 transition-all">
                                     <p className="text-sm uppercase tracking-widest text-primary font-bold mb-2">Ritual Duration</p>
