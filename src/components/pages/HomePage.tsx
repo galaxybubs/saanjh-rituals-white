@@ -93,7 +93,7 @@ const ParallaxImage = ({ src, alt, className, speed = 0.5 }: { src: string; alt:
   const y = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
   return (
     <div ref={ref} className={`overflow-hidden ${className}`}>
-      <motion.div style={{ y }} className="w-full h-[120%] -mt-[10%]">
+      <motion.div style={{ y }} className="w-full h-full">
         <Image src={src} alt={alt} className="w-full h-full object-cover" width={1200} />
       </motion.div>
     </div>
