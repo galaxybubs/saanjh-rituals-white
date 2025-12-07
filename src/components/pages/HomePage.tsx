@@ -247,7 +247,7 @@ export default function HomePage() {
 
           </section>
           {/* --- SAANJH RITUAL CALLOUT: PREMIUM SPLIT LAYOUT --- */}
-          <section className="md:px-12 bg-warm-cream relative overflow-hidden py-0 px-12 pt-[100px] pr-12 pb-[45px] pl-12">
+          <section id="29386f1f-37ac-40cb-b88a-26d0b09baf9a" className="md:px-12 bg-warm-cream relative overflow-hidden py-0 px-12 pt-[140px] pr-12 pb-[100px] pl-12">
             <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
             
             <div className="max-w-7xl mx-auto">
