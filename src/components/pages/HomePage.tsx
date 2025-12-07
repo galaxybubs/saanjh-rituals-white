@@ -276,7 +276,7 @@ export default function HomePage() {
                     </div>
 
                     {/* Right: Image + Containers Below */}
-                    <div className="lg:col-span-2 flex flex-col gap-6">
+                    <div className="lg:col-span-2 flex flex-col gap-3">
                         {/* Image */}
                         <AnimatedElement delay={300} className="h-full">
                             <div className="relative h-[400px] lg:h-[500px] rounded-3xl overflow-hidden shadow-2xl group">
