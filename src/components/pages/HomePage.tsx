@@ -423,7 +423,7 @@ export default function HomePage() {
                                                         {blend.blendName}
                                                     </h3>
                                                     <p className="font-paragraph text-xs text-foreground/60 max-w-sm leading-relaxed">
-                                                        Supports {blend.keyBenefits}. Ideal for evening grounding, relaxation, and unwinding.
+                                                        {blend.keyBenefits}
                                                     </p>
                                                 </div>
                                                 <span className="font-paragraph text-base font-medium text-foreground whitespace-nowrap ml-2">
