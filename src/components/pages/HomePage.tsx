@@ -295,7 +295,7 @@ export default function HomePage() {
 
                         {/* Quote Container */}
                         <AnimatedElement delay={600} className="mt-0">
-                            <div className="bg-gradient-to-r from-primary/5 to-secondary/5 border-l-4 border-primary rounded-lg backdrop-blur-sm p-8 py-6">
+                            <div className="bg-gradient-to-r from-primary/5 to-secondary/5 border-l-4 border-primary rounded-lg backdrop-blur-sm p-8 py-6 px-8 my-[25px] mx-0">
                                 <p className="text-lg text-foreground/80 leading-relaxed italic font-light">
                                     "Saanjh is not just about what you drink—it's about who you become when you pause, breathe, and reconnect with the ancient wisdom flowing through your veins. It's about reclaiming your right to stillness in a world that demands constant motion."
                                 </p>
