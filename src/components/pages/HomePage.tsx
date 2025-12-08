@@ -247,7 +247,7 @@ export default function HomePage() {
 
           </section>
           {/* --- SAANJH RITUAL CALLOUT: PREMIUM SPLIT LAYOUT --- */}
-          <section id="29386f1f-37ac-40cb-b88a-26d0b09baf9a" className="md:px-12 bg-warm-cream relative overflow-hidden py-6 px-12">
+          <section id="29386f1f-37ac-40cb-b88a-26d0b09baf9a" className="md:px-12 bg-warm-cream relative overflow-hidden py-[23px] px-12">
             <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
             
             <div className="max-w-7xl mx-auto">
@@ -423,7 +423,7 @@ export default function HomePage() {
                                                         {blend.blendName}
                                                     </h3>
                                                     <p className="font-paragraph text-xs text-foreground/60 max-w-sm leading-relaxed">
-                                                        Supports {blend.keyBenefits}. Ideal for evening grounding, relaxation, and unwinding.
+                                                        {blend.keyBenefits}
                                                     </p>
                                                 </div>
                                                 <span className="font-paragraph text-base font-medium text-foreground whitespace-nowrap ml-2">
