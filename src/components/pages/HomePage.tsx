@@ -194,7 +194,7 @@ export default function HomePage() {
                     originWidth={960}
                     originHeight={540} />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/60 mix-blend-multiply" />
-                <div className="absolute inset-0 bg-gradient-to-t from-warm-cream via-transparent to-transparent opacity-20" />
+                <div className="absolute inset-0 bg-gradient-to-t from-warm-cream via-transparent to-transparent opacity-20 p-0" />
             </div>
 
             {/* Content Layer */}
