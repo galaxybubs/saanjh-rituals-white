@@ -183,7 +183,7 @@ export default function HomePage() {
   };
 
   return (
-      <div className="min-h-screen bg-warm-cream text-foreground font-paragraph overflow-clip selection:bg-primary/30 selection:text-foreground" style={{ paddingTop: '64px', paddingBottom: '64px' }}>
+      <div className="min-h-screen bg-warm-cream text-foreground font-paragraph overflow-clip selection:bg-primary/30 selection:text-foreground" style={{ paddingBottom: '64px' }}>
           {/* --- HERO SECTION: CINEMATIC IMMERSION --- */}
           <section className="relative h-[95vh] w-full overflow-hidden flex items-center justify-center">
             {/* Background Parallax Layer */}
